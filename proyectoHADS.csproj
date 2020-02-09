@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LibreriaClase">
+      <HintPath>LIbreriaClase\bin\Debug\netstandard2.0\LibreriaClase.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -67,10 +70,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Registroaspx.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registroaspx.aspx.cs">
+      <DependentUpon>Registroaspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registroaspx.aspx.designer.cs">
+      <DependentUpon>Registroaspx.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

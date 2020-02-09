@@ -1,0 +1,8 @@
+E:\UNIVERSIDAD\HADS\proyectoHADS\LIbreriaClase\bin\Debug\netstandard2.0\LibreriaClase.deps.json
+E:\UNIVERSIDAD\HADS\proyectoHADS\LIbreriaClase\bin\Debug\netstandard2.0\LibreriaClase.dll
+E:\UNIVERSIDAD\HADS\proyectoHADS\LIbreriaClase\bin\Debug\netstandard2.0\LibreriaClase.pdb
+E:\UNIVERSIDAD\HADS\proyectoHADS\LIbreriaClase\obj\Debug\netstandard2.0\LibreriaClase.csprojAssemblyReference.cache
+E:\UNIVERSIDAD\HADS\proyectoHADS\LIbreriaClase\obj\Debug\netstandard2.0\LibreriaClase.AssemblyInfoInputs.cache
+E:\UNIVERSIDAD\HADS\proyectoHADS\LIbreriaClase\obj\Debug\netstandard2.0\LibreriaClase.AssemblyInfo.cs
+E:\UNIVERSIDAD\HADS\proyectoHADS\LIbreriaClase\obj\Debug\netstandard2.0\LibreriaClase.dll
+E:\UNIVERSIDAD\HADS\proyectoHADS\LIbreriaClase\obj\Debug\netstandard2.0\LibreriaClase.pdb
