@@ -17,10 +17,10 @@ namespace LibreriaClase
             mensaje.Subject = "Confirmación de correo";
             string html = @"<html>
 	                      <body>
-	                      <p> Sr/Sra Cliente</p>
-	                      <p> <a ";
+	                      <p> Saludos: </p>
+	                      <p> <a href="+'"';
             string enlace = Convert.ToString("http://localhost/PracticaHAS/confirmar.aspx?mbr=pepe%40pepe.pepe&numconf=9715284");
-            string enlace2 = enlace + NumConf+ "></a> </p></html>";
+            string enlace2 = enlace + NumConf+ '"'+" > </a> </p></html>";
             string html2 = String.Concat(html, enlace2);
 
             mensaje.Body = html2;

@@ -43,7 +43,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LibreriaClase">
+    <Reference Include="LibreriaClase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>LIbreriaClase\bin\Debug\netstandard2.0\LibreriaClase.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />

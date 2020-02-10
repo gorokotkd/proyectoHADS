@@ -42,7 +42,7 @@
         </p>
         <p>
             <asp:Label ID="Label4" runat="server" Text="Label">Password</asp:Label>
-            <asp:TextBox ID="TextBox4" runat="server" CssClass="auto-style5" OnTextChanged="TextBox4_TextChanged" Height="22px"></asp:TextBox>
+            <asp:TextBox ID="TextBox4" runat="server" CssClass="auto-style5"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Campo necesario." ControlToValidate="TextBox4" ForeColor="Red"></asp:RequiredFieldValidator>
         </p>
         <p>
@@ -55,16 +55,11 @@
             <asp:ListItem>Alumno</asp:ListItem>
             <asp:ListItem>Profesor</asp:ListItem>
         </asp:RadioButtonList>
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Registrar" Width="148px" CssClass="auto-style6" style="height: 26px" />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Registrar" Width="148px" CssClass="auto-style6" />
         <p>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ErrorMessage="Formato de Email incorrecto" ForeColor="Red"></asp:RegularExpressionValidator>
-            
-
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" enableclientscript="True" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ErrorMessage="Formato de Email incorrecto" ForeColor="Red"></asp:RegularExpressionValidator>
         </p>
-        <p>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox4" ValidationExpression="/^.{6,}$/" ErrorMessage="Formato de Contraseña incorrecto. Tiene que tener 6 caracteres como mínimo." ForeColor="Red"></asp:RegularExpressionValidator>
-            
-
+        <p>            
         </p>
     </form>
 </body>

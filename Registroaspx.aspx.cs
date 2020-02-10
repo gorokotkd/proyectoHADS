@@ -17,8 +17,10 @@ namespace proyectoHADS
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Correo enviado')", true);
             EnviarCorreo correoSender = new EnviarCorreo();
             correoSender.enviarCorreo(TextBox1.Text);
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Correo enviado')", true);
         }
     }
 }
