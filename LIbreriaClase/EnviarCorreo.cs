@@ -2,6 +2,8 @@
 using System.Net;
 using System.Net.Mail;
 using System.IO;
+using Glimpse.AspNet.Tab;
+using System.Reflection;
 
 namespace LibreriaClase
 {
@@ -20,10 +22,11 @@ namespace LibreriaClase
             string enlace2 = enlace + NumConf;
             string body = string.Empty;
 
-            using (StreamReader reader = new StreamReader(("~/EmailTemplate.html")))
-            {
-                body = reader.ReadToEnd();
-            }
+            var assembly = Assembly.GetExecutingAssembly();
+            string[] names = assembly.GetManifestResourceNames();
+            StreamReader reader = new StreamReader(assembly.GetManifestResourceStream("proyectoHADS.LIbreriaClase.EmailTemplate.html"));
+            body = reader.ReadToEnd();
+
             body = body.Replace("{URL}", enlace2);
             mensaje.Body = body;
             SmtpClient cliente = new SmtpClient("smtp.gmail.com", 587)
