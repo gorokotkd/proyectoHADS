@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Net.Mail;
+using System.IO;
 
 namespace LibreriaClase
 {
@@ -15,15 +16,16 @@ namespace LibreriaClase
             MailMessage mensaje = new MailMessage(dirOrigen, dirDestino);
 
             mensaje.Subject = "Confirmación de correo";
-            string html = @"<html>
-	                      <body>
-	                      <p> Saludos: </p>
-	                      <p> <a href="+'"';
-            string enlace = Convert.ToString("http://localhost/PracticaHAS/confirmar.aspx?mbr=pepe%40pepe.pepe&numconf=9715284");
-            string enlace2 = enlace + NumConf+ '"'+" > </a> </p></html>";
-            string html2 = String.Concat(html, enlace2);
+            string enlace = Convert.ToString("http://localhost/PracticaHAS/confirmar.aspx?mbr=pepe%40pepe.pepe&numconf=");
+            string enlace2 = enlace + NumConf;
+            string body = string.Empty;
 
-            mensaje.Body = html2;
+            using (StreamReader reader = new StreamReader(("~/EmailTemplate.html")))
+            {
+                body = reader.ReadToEnd();
+            }
+            body = body.Replace("{URL}", enlace2);
+            mensaje.Body = body;
             SmtpClient cliente = new SmtpClient("smtp.gmail.com", 587)
             {
                 Credentials = new NetworkCredential("iakigarcianoya@gmail.com", "iakigarcianoya"),
