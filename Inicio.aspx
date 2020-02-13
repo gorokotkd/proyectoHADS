@@ -20,14 +20,14 @@
         <br />
         <br />
         Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-        <asp:TextBox ID="loginPass" runat="server" UseSystemPasswordChar="True" OnTextChanged="loginPass_TextChanged"></asp:TextBox>
+        <asp:TextBox ID="loginPass" runat="server" UseSystemPasswordChar="True" OnTextChanged="loginPass_TextChanged" TextMode="Password"></asp:TextBox>
         &nbsp;&nbsp;&nbsp;
         <asp:RequiredFieldValidator ID="requieredPass" runat="server" ControlToValidate="loginPass" ErrorMessage="El campo no puede estar vacio." ForeColor="Red">*</asp:RequiredFieldValidator>
         <br />
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" Text="LogIn" />
+        <asp:Button ID="Button1" runat="server" Text="LogIn" OnClick="Button1_Click" />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:LinkButton ID="LinkButton1" runat="server">No tengo cuenta, registrarse.</asp:LinkButton>
         <br />

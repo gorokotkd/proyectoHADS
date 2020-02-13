@@ -15,9 +15,9 @@ namespace proyectoHADS
 
         }
 
-        protected void loginPass_TextChanged(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
-            loginPass.PassWordChar = '\u25CF';
+
         }
     }
 }

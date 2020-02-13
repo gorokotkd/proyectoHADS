@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proyectoHADS", "proyectoHADS.csproj", "{78E8A1BF-BA96-4FC5-911B-68FEDDA83064}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "..\DataAccess\DataAccess.csproj", "{0249B9AB-9DF5-4478-9626-9B95F3BB436F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{78E8A1BF-BA96-4FC5-911B-68FEDDA83064}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78E8A1BF-BA96-4FC5-911B-68FEDDA83064}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78E8A1BF-BA96-4FC5-911B-68FEDDA83064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0249B9AB-9DF5-4478-9626-9B95F3BB436F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0249B9AB-9DF5-4478-9626-9B95F3BB436F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0249B9AB-9DF5-4478-9626-9B95F3BB436F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0249B9AB-9DF5-4478-9626-9B95F3BB436F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
