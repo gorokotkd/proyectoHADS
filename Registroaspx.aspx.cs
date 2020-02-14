@@ -22,5 +22,10 @@ namespace proyectoHADS
             correoSender.enviarCorreo(TextBox1.Text);
             ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Correo enviado')", true);
         }
+
+        protected void TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

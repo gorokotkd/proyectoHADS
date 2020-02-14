@@ -42,12 +42,12 @@
         </p>
         <p>
             <asp:Label ID="Label4" runat="server" Text="Label">Password</asp:Label>
-            <asp:TextBox ID="TextBox4" runat="server" CssClass="auto-style5"></asp:TextBox>
+            <asp:TextBox ID="TextBox4" runat="server" CssClass="auto-style5" textmode="Password"  OnTextChanged="TextBox4_TextChanged"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Campo necesario." ControlToValidate="TextBox4" ForeColor="Red"></asp:RequiredFieldValidator>
         </p>
         <p>
             <asp:Label ID="Label5" runat="server" Text="Label">Repetir Password</asp:Label>
-            <asp:TextBox ID="TextBox5" runat="server" CssClass="auto-style4"></asp:TextBox>
+            <asp:TextBox ID="TextBox5" runat="server" CssClass="auto-style4" textmode="Password" ></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Campo necesario." ControlToValidate="TextBox5" ForeColor="Red"></asp:RequiredFieldValidator>
         </p>
         Rol:
@@ -57,9 +57,14 @@
         </asp:RadioButtonList>
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Registrar" Width="148px" CssClass="auto-style6" />
         <p>
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" enableclientscript="True" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ErrorMessage="Formato de Email incorrecto" ForeColor="Red"></asp:RegularExpressionValidator>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" enableclientscript="True" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ErrorMessage="Formato de 'Email' incorrecto." ForeColor="Red"></asp:RegularExpressionValidator>
         </p>
-        <p>            
+        <p>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox4" ForeColor="Red" enableclientscript="True" ValidationExpression="^.{6,}$" ErrorMessage="El formato de la 'Contraseña' no es el correcto, mínimo 6 caracteres."></asp:RegularExpressionValidator>
+        </p>
+        <asp:CompareValidator ID="CompareValidator1" runat="server" 
+            ControlToCompare="TextBox4" ControlToValidate="TextBox5" ForeColor="Red" ErrorMessage="Las 'Contraseñas' no coinciden.">
+        </asp:CompareValidator>           
         </p>
     </form>
 </body>
