@@ -78,6 +78,15 @@ namespace proyectoHADS
         protected global::System.Web.UI.WebControls.RequiredFieldValidator requieredPass;
 
         /// <summary>
+        /// Control errorLabel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errorLabel;
+
+        /// <summary>
         /// Control Button1.
         /// </summary>
         /// <remarks>

@@ -56,3 +56,7 @@ E:\Uni\3ro\HADS\Proyecto\proyectoHADS\obj\Debug\proyectoHADS.csprojAssemblyRefer
 E:\Uni\3ro\HADS\Proyecto\proyectoHADS\obj\Debug\proyectoHADS.csproj.CopyComplete
 E:\Uni\3ro\HADS\Proyecto\proyectoHADS\obj\Debug\proyectoHADS.dll
 E:\Uni\3ro\HADS\Proyecto\proyectoHADS\obj\Debug\proyectoHADS.pdb
+E:\Uni\3ro\HADS\Proyecto\proyectoHADS\bin\DataAccess.dll
+E:\Uni\3ro\HADS\Proyecto\proyectoHADS\bin\System.Data.SqlClient.dll
+E:\Uni\3ro\HADS\Proyecto\proyectoHADS\bin\DataAccess.pdb
+E:\Uni\3ro\HADS\Proyecto\proyectoHADS\bin\System.Data.SqlClient.xml

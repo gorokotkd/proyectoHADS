@@ -16,20 +16,21 @@
         <asp:TextBox ID="loginEmail" runat="server"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="loginEmail" ErrorMessage="Debes completar este campo" ForeColor="Red">*</asp:RequiredFieldValidator>
-        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="loginEmail" ErrorMessage="El email introducido no es valido" ForeColor="Red"> </asp:RegularExpressionValidator>
+        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="loginEmail" ErrorMessage="El email introducido no es valido" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">El email introducido no es valido</asp:RegularExpressionValidator>
         <br />
         <br />
         Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-        <asp:TextBox ID="loginPass" runat="server" UseSystemPasswordChar="True" OnTextChanged="loginPass_TextChanged" TextMode="Password"></asp:TextBox>
+        <asp:TextBox ID="loginPass" runat="server" TextMode="Password"></asp:TextBox>
         &nbsp;&nbsp;&nbsp;
         <asp:RequiredFieldValidator ID="requieredPass" runat="server" ControlToValidate="loginPass" ErrorMessage="El campo no puede estar vacio." ForeColor="Red">*</asp:RequiredFieldValidator>
         <br />
         <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="errorLabel" runat="server" ForeColor="Red" Visible="False"></asp:Label>
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button1" runat="server" Text="LogIn" OnClick="Button1_Click" />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:LinkButton ID="LinkButton1" runat="server">No tengo cuenta, registrarse.</asp:LinkButton>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton ID="LinkButton1" runat="server">No tengo cuenta, registrarse.</asp:LinkButton>
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:LinkButton ID="LinkButton2" runat="server">He olvidado mi contraseña.</asp:LinkButton>

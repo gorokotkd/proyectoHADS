@@ -17,7 +17,18 @@ namespace proyectoHADS
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            //APERTURA DE CONEXION CON LA BD.
+            String resul = DataAccess.DataAccess.OpenConnection();
 
+            errorLabel.Text = resul;
+            errorLabel.Visible = true;
+
+            DataAccess.DataAccess.CheckUserLogin(loginEmail.Text, loginPass.Text);
+
+
+            //CIERRE DE CONEXION CON LA BD.
+            DataAccess.DataAccess.CloseConnection();
+            
         }
     }
 }
