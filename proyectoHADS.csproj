@@ -74,6 +74,7 @@
     <Content Include="Global.asax" />
     <Content Include="Registroaspx.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Confirmar.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -86,6 +87,13 @@
     </Compile>
     <Compile Include="Registroaspx.aspx.designer.cs">
       <DependentUpon>Registroaspx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmar.aspx.cs">
+      <DependentUpon>Confirmar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Confirmar.aspx.designer.cs">
+      <DependentUpon>Confirmar.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
