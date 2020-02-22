@@ -18,16 +18,15 @@ namespace LibreriaClase
             MailMessage mensaje = new MailMessage(dirOrigen, dirDestino);
 
             mensaje.Subject = "Confirmación de correo";
-            string enlace = Convert.ToString("http://localhost/PracticaHAS/confirmar.aspx?mbr=pepe%40pepe.pepe&numconf=");
-            string enlace2 = enlace + NumConf;
-            string body = string.Empty;
+            string enlace = Convert.ToString("http://localhost/proyectoHADS/confirmar.aspx?mbr="+email+"&numconf="+ NumConf);
+            string body = "EL ENLACE PARA RESTABLECER TU CONTRASEÑA YA ESTÁ LISTO :"+enlace;
 
-            var assembly = Assembly.GetExecutingAssembly();
-            string[] names = assembly.GetManifestResourceNames();
-            StreamReader reader = new StreamReader(assembly.GetManifestResourceStream("proyectoHADS.LIbreriaClase.EmailTemplate.html"));
-            body = reader.ReadToEnd();
+            // var assembly = Assembly.GetExecutingAssembly();
+            // string[] names = assembly.GetManifestResourceNames();
+            // StreamReader reader = new StreamReader(assembly.GetManifestResourceStream("proyectoHADS.LIbreriaClase.EmailTemplate.html"));
+            //  body = reader.ReadToEnd();
+            // body = body.Replace("{URL}", enlace2);
 
-            body = body.Replace("{URL}", enlace2);
             mensaje.Body = body;
             SmtpClient cliente = new SmtpClient("smtp.gmail.com", 587)
             {
