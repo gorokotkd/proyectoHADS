@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proyectoHADS", "proyectoHADS.csproj", "{78E8A1BF-BA96-4FC5-911B-68FEDDA83064}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "..\DataAccess\DataAccess.csproj", "{0249B9AB-9DF5-4478-9626-9B95F3BB436F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "..\DataAccess\DataAccess.csproj", "{0249B9AB-9DF5-4478-9626-9B95F3BB436F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibreriaClase", "C:\Users\Gorka Alvare\Desktop\LIbreriaClase\LibreriaClase.csproj", "{C5B330C6-7C8A-41CB-9135-725E8B1017D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0249B9AB-9DF5-4478-9626-9B95F3BB436F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0249B9AB-9DF5-4478-9626-9B95F3BB436F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0249B9AB-9DF5-4478-9626-9B95F3BB436F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5B330C6-7C8A-41CB-9135-725E8B1017D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5B330C6-7C8A-41CB-9135-725E8B1017D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5B330C6-7C8A-41CB-9135-725E8B1017D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5B330C6-7C8A-41CB-9135-725E8B1017D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

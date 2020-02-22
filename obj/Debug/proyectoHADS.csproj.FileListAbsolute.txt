@@ -52,7 +52,6 @@ E:\Uni\3ro\HADS\Proyecto\proyectoHADS\bin\roslyn\VBCSCompiler.exe
 E:\Uni\3ro\HADS\Proyecto\proyectoHADS\bin\roslyn\VBCSCompiler.exe.config
 E:\Uni\3ro\HADS\Proyecto\proyectoHADS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\Uni\3ro\HADS\Proyecto\proyectoHADS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\Uni\3ro\HADS\Proyecto\proyectoHADS\obj\Debug\proyectoHADS.csprojAssemblyReference.cache
 E:\Uni\3ro\HADS\Proyecto\proyectoHADS\obj\Debug\proyectoHADS.csproj.CopyComplete
 E:\Uni\3ro\HADS\Proyecto\proyectoHADS\obj\Debug\proyectoHADS.dll
 E:\Uni\3ro\HADS\Proyecto\proyectoHADS\obj\Debug\proyectoHADS.pdb
@@ -60,3 +59,6 @@ E:\Uni\3ro\HADS\Proyecto\proyectoHADS\bin\DataAccess.dll
 E:\Uni\3ro\HADS\Proyecto\proyectoHADS\bin\System.Data.SqlClient.dll
 E:\Uni\3ro\HADS\Proyecto\proyectoHADS\bin\DataAccess.pdb
 E:\Uni\3ro\HADS\Proyecto\proyectoHADS\bin\System.Data.SqlClient.xml
+E:\Uni\3ro\HADS\Proyecto\proyectoHADS\bin\LibreriaClase.dll
+E:\Uni\3ro\HADS\Proyecto\proyectoHADS\bin\LibreriaClase.pdb
+E:\Uni\3ro\HADS\Proyecto\proyectoHADS\obj\Debug\proyectoHADS.csprojAssemblyReference.cache

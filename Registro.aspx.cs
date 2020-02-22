@@ -23,7 +23,7 @@ namespace proyectoHADS
             var random = new Random();
             Double NumConf = Math.Round((random.NextDouble() * 9000000) + 1000000);
 
-            string enlace = Convert.ToString("http://localhost/proyectoHADS/confirmar.aspx?mbr=" + TextBox1.Text + "&numconf=" + NumConf);
+            string enlace = Convert.ToString("https://localhost/Confirmar.aspx?mbr=" + TextBox1.Text + "&numconf=" + NumConf);
             string msg = "EL ENLACE PARA RESTABLECER TU CONTRASEÑA YA ESTÁ LISTO :" + enlace;
 
             String subject = "Confirmacion de correo electronico.";
@@ -39,7 +39,7 @@ namespace proyectoHADS
             DataAccess.DataAccess.OpenConnection();
 
             DataAccess.DataAccess.InsertUser(TextBox1.Text, TextBox2.Text, TextBox3.Text,
-                numConrf,false, RadioButtonList1.SelectedValue,TextBox4.Text,0);
+                numConrf,0, RadioButtonList1.SelectedValue,TextBox4.Text,0);
 
             DataAccess.DataAccess.CloseConnection();
         }

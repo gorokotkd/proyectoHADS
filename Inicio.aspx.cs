@@ -27,7 +27,7 @@ namespace proyectoHADS
             SqlDataReader dr = DataAccess.DataAccess.CheckUserLogin(loginEmail.Text, loginPass.Text);
 
             //Compruebo si la combinacion user+pass es corecta.
-            if (!dr.Read())
+            if (!dr.HasRows)
             {
                 errorLabel.Text = "Usuario o contraseña incorrectos.";
                 errorLabel.Visible = true;

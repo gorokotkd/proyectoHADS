@@ -50,7 +50,7 @@
     </Reference>
     <Reference Include="LibreriaClase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\LibreriaClase.dll</HintPath>
+      <HintPath>C:\Users\Gorka Alvare\Desktop\LIbreriaClase\bin\Debug\netstandard2.0\LibreriaClase.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
