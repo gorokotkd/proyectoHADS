@@ -46,5 +46,15 @@ namespace proyectoHADS
             DataAccess.DataAccess.CloseConnection();
             
         }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Registro.aspx");
+        }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/CambiarPassword.aspx");
+        }
     }
 }

@@ -56,7 +56,9 @@
             <asp:ListItem>Profesor</asp:ListItem>
         </asp:RadioButtonList>
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Registrar" Width="148px" CssClass="auto-style6" />
-        <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:LinkButton ID="return2Login" runat="server" CausesValidation="False" OnClick="return2Login_Click">Volver al Login.</asp:LinkButton>
+&nbsp;<p>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox1" enableclientscript="True" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ErrorMessage="Formato de 'Email' incorrecto." ForeColor="Red"></asp:RegularExpressionValidator>
         </p>
         <p>

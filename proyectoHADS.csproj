@@ -113,6 +113,9 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="Properties\PublishProfiles\hads1920-G18 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\hads1920-G18 - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\hads1920-G18 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\hahads18 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\hahads18 - ReadOnly - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\hahads18 - Web Deploy.pubxml" />

@@ -25,7 +25,7 @@ namespace proyectoHADS
 
         protected void Session_Start(object sender, EventArgs e)
         {
-
+            Session["validEmail"] = "NO";
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
