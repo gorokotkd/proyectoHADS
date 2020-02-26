@@ -23,13 +23,13 @@ namespace proyectoHADS
             var random = new Random();
             int NumConf = int.Parse(Math.Round((random.NextDouble() * 9000000) + 1000000).ToString());
 
-            string enlace = Convert.ToString("https://localhost/Confirmar.aspx?mbr=" + TextBox1.Text + "&numconf=" + NumConf);
+            string enlace = Convert.ToString("https://hads1920-g18.azurewebsites.net/Confirmar.aspx?mbr=" + TextBox1.Text + "&numconf=" + NumConf);
             string msg = "EL ENLACE PARA RESTABLECER TU CONTRASEÑA YA ESTÁ LISTO :" + enlace;
 
             String subject = "Confirmacion de correo electronico.";
 
             correoSender.enviarCorreo(TextBox1.Text, msg, subject);
-            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Correo enviado')", true);
+         //   ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Correo enviado')", true);
 
             guardarRegistroEnBd(NumConf);
         }

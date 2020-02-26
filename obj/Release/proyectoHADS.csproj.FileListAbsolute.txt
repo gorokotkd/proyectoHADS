@@ -60,3 +60,5 @@ E:\Uni\3ro\HADS\Proyecto\proyectoHADS\obj\Release\proyectoHADS.csprojAssemblyRef
 E:\Uni\3ro\HADS\Proyecto\proyectoHADS\obj\Release\proyectoHADS.csproj.CopyComplete
 E:\Uni\3ro\HADS\Proyecto\proyectoHADS\obj\Release\proyectoHADS.dll
 E:\Uni\3ro\HADS\Proyecto\proyectoHADS\obj\Release\proyectoHADS.pdb
+E:\Uni\3ro\HADS\Proyecto\proyectoHADS\bin\LibreriaClase.dll
+E:\Uni\3ro\HADS\Proyecto\proyectoHADS\bin\LibreriaClase.pdb

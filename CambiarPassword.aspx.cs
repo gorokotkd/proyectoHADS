@@ -13,7 +13,7 @@ namespace proyectoHADS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["validEmail"].ToString()=="SI")
+            if (Session["validEmail"].ToString()=="SI" && Request["numConf"]==Session["numConf"].ToString())
             {
                 confirmarPassButton.Visible = true;
                 pass1Box.Visible = true;
@@ -60,8 +60,8 @@ namespace proyectoHADS
 
                 var random = new Random();
                 int NumConf = int.Parse(Math.Round((random.NextDouble() * 9000000) + 1000000).ToString());
-
-                string enlace = Convert.ToString("https://localhost/CambiarPassword.aspx");
+                Session["numConf"] = NumConf;
+                string enlace = Convert.ToString("https://hads1920-g18.azurewebsites.net/CambiarPassword.aspx?numConf="+NumConf);
                 string msg = "EL ENLACE PARA RESTABLECER TU CONTRASEÑA YA ESTÁ LISTO :" + enlace+"\n"+
                     "Tu codigo de recuperacion es: "+NumConf;
 
@@ -69,6 +69,7 @@ namespace proyectoHADS
                 EnviarCorreo emailSender = new LibreriaClase.EnviarCorreo();
                 emailSender.enviarCorreo(email, msg, subject);
                 Session["validEmail"] = "SI";
+                Session["email"] = email;
             }
             else
             {
@@ -80,6 +81,23 @@ namespace proyectoHADS
 
             DataAccess.DataAccess.CloseConnection();
 
+        }
+
+        protected void confirmarPassButton_Click(object sender, EventArgs e)
+        {
+            if(pass1Box.Text == pass2Box.Text)
+            {
+                DataAccess.DataAccess.OpenConnection();
+
+                DataAccess.DataAccess.updateUserPass(Session["email"].ToString(), pass1Box.Text);
+
+                DataAccess.DataAccess.CloseConnection();
+            }
+            else
+            {
+                Label3.Text = "Las contraseñas no coinciden.";
+                Label3.Visible = true;
+            }
         }
     }
 }

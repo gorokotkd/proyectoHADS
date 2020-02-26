@@ -35,7 +35,7 @@
             <asp:TextBox ID="pass2Box" runat="server" TextMode="Password" Visible="False"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="confirmarPassButton" runat="server" Text="Confirmar" Visible="False" />
+            <asp:Button ID="confirmarPassButton" runat="server" Text="Confirmar" Visible="False" OnClick="confirmarPassButton_Click" />
         </div>
     </form>
 </body>

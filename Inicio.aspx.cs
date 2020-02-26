@@ -25,18 +25,33 @@ namespace proyectoHADS
             errorLabel.Visible = true;
 
             SqlDataReader dr = DataAccess.DataAccess.CheckUserLogin(loginEmail.Text, loginPass.Text);
+            
 
             //Compruebo si la combinacion user+pass es corecta.
-            if (!dr.HasRows)
+            if (!dr.Read())
             {
                 errorLabel.Text = "Usuario o contraseña incorrectos.";
                 errorLabel.Visible = true;
+                //Cierro el DataReader
+                dr.Close();
+
+                //CIERRE DE CONEXION CON LA BD.
+                DataAccess.DataAccess.CloseConnection();
+                return;
             }
             //El usuario aun no ha confirmado el correo electronico.
             else if (!dr.GetBoolean(dr.GetOrdinal("confirmado")))
             {
                 errorLabel.Text = "Aun no se ha confirmado el correo electronico.";
                 errorLabel.Visible = true;
+
+                //Cierro el DataReader
+                dr.Close();
+
+                //CIERRE DE CONEXION CON LA BD.
+                DataAccess.DataAccess.CloseConnection();
+
+                return;
             }
 
             //Cierro el DataReader
@@ -44,7 +59,8 @@ namespace proyectoHADS
 
             //CIERRE DE CONEXION CON LA BD.
             DataAccess.DataAccess.CloseConnection();
-            
+
+            Response.Redirect("~/Principal.aspx");
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
