@@ -1,0 +1,8 @@
+E:\Uni\3ro\HADS\Proyecto\DataAccess\bin\Debug\netstandard2.0\DataAccess.deps.json
+E:\Uni\3ro\HADS\Proyecto\DataAccess\bin\Debug\netstandard2.0\DataAccess.dll
+E:\Uni\3ro\HADS\Proyecto\DataAccess\obj\Debug\netstandard2.0\DataAccess.csprojAssemblyReference.cache
+E:\Uni\3ro\HADS\Proyecto\DataAccess\obj\Debug\netstandard2.0\DataAccess.AssemblyInfoInputs.cache
+E:\Uni\3ro\HADS\Proyecto\DataAccess\obj\Debug\netstandard2.0\DataAccess.AssemblyInfo.cs
+E:\Uni\3ro\HADS\Proyecto\DataAccess\bin\Debug\netstandard2.0\DataAccess.pdb
+E:\Uni\3ro\HADS\Proyecto\DataAccess\obj\Debug\netstandard2.0\DataAccess.dll
+E:\Uni\3ro\HADS\Proyecto\DataAccess\obj\Debug\netstandard2.0\DataAccess.pdb
