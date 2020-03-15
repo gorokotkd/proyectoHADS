@@ -16,7 +16,6 @@
             </SelectParameters>
         </asp:SqlDataSource>
     </div>
-    <label id="valor" runat="server"></label>
 
     <div id="tareasView" class="table-responsive">
         <asp:GridView ID="GridView1" runat="server" CssClass="table table-striped" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">

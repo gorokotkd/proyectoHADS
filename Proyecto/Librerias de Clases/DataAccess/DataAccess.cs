@@ -154,7 +154,7 @@ namespace DataAccess
             
 
             comando.Dispose();
-            return resul + " registro(s) modificado(s) de la BD.";
+            return resul.ToString();
         }
 
         public static SqlDataReader CheckUserLogin(String email, String pass)

@@ -20,9 +20,8 @@ namespace Proyecto
 
         private void initializeGridView()
         {
-            valor.InnerText = asignaturas.SelectedValue;
 
-             string sql = "SELECT Codigo, Descripcion, HEstimadas, TipoTarea FROM TareasGenericas WHERE CodAsig='"+asignaturas.SelectedValue+"' AND Explotacion=1";
+             string sql = "SELECT Codigo, Descripcion, HEstimadas AS Horas, TipoTarea AS Tipo FROM TareasGenericas WHERE CodAsig='"+asignaturas.SelectedValue+"' AND Explotacion=1";
         // string sql = "SELECT Codigo, Descripcion, HEstimadas, TipoTarea FROM TareasGenericas WHERE CodAsig='EDA1' AND Explotacion='1'";
             SqlConnection connection = new SqlConnection(DataAccess.DataAccess.CONNECTION_STRING);
 
