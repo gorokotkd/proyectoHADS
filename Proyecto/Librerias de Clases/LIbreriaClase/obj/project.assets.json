@@ -1283,19 +1283,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gorka Alvare\\.nuget\\packages\\": {}
+    "C:\\Users\\GARCI\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Uni\\3ro\\HADS\\Proyecto\\Proyecto\\Librerias de Clases\\LIbreriaClase\\LibreriaClase.csproj",
+      "projectUniqueName": "D:\\UNIVERSIDAD\\HADS\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\LibreriaClase.csproj",
       "projectName": "LibreriaClase",
-      "projectPath": "E:\\Uni\\3ro\\HADS\\Proyecto\\Proyecto\\Librerias de Clases\\LIbreriaClase\\LibreriaClase.csproj",
-      "packagesPath": "C:\\Users\\Gorka Alvare\\.nuget\\packages\\",
-      "outputPath": "E:\\Uni\\3ro\\HADS\\Proyecto\\Proyecto\\Librerias de Clases\\LIbreriaClase\\obj\\",
+      "projectPath": "D:\\UNIVERSIDAD\\HADS\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\LibreriaClase.csproj",
+      "packagesPath": "C:\\Users\\GARCI\\.nuget\\packages\\",
+      "outputPath": "D:\\UNIVERSIDAD\\HADS\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Gorka Alvare\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\GARCI\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1353,7 +1353,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"Glimpse 1.8.6\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETStandard,Version=v2.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "message": "Package 'Glimpse 1.8.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "Glimpse",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"
@@ -1363,7 +1363,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"Glimpse.AspNet 1.9.2\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETStandard,Version=v2.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "message": "Package 'Glimpse.AspNet 1.9.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "Glimpse.AspNet",
       "targetGraphs": [
         ".NETStandard,Version=v2.0"

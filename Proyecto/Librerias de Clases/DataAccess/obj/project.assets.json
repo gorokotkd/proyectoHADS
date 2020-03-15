@@ -851,19 +851,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gorka Alvare\\.nuget\\packages\\": {}
+    "C:\\Users\\GARCI\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Uni\\3ro\\HADS\\Proyecto\\Proyecto\\Librerias de Clases\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "D:\\UNIVERSIDAD\\HADS\\proyectoHADS\\Proyecto\\Librerias de Clases\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "E:\\Uni\\3ro\\HADS\\Proyecto\\Proyecto\\Librerias de Clases\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\Gorka Alvare\\.nuget\\packages\\",
-      "outputPath": "E:\\Uni\\3ro\\HADS\\Proyecto\\Proyecto\\Librerias de Clases\\DataAccess\\obj\\",
+      "projectPath": "D:\\UNIVERSIDAD\\HADS\\proyectoHADS\\Proyecto\\Librerias de Clases\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\GARCI\\.nuget\\packages\\",
+      "outputPath": "D:\\UNIVERSIDAD\\HADS\\proyectoHADS\\Proyecto\\Librerias de Clases\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Gorka Alvare\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\GARCI\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
