@@ -11,7 +11,7 @@ namespace DataAccess
       /*  private static readonly String CONNECTION_STRING = "Server=tcp:hads-g18.database.windows.net,1433;Initial Catalog=HADSG18;" +
             "Persist Security Info=False;User ID=porquiño;Password=>GupX66R;" +
             "MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";*/
-        private static readonly String CONNECTION_STRING = "Server=tcp:hads.database.windows.net,1433;" +
+        public static readonly String CONNECTION_STRING = "Server=tcp:hads.database.windows.net,1433;" +
             "Initial Catalog=Amigos;Persist Security Info=False;User ID=vadillo@ehu.es@hads;Password=curso19-20;" +
             "MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 

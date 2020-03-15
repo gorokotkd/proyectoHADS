@@ -67,7 +67,7 @@ namespace Proyecto
 
             Session["email"] = emailL.Text;
             Session["identificado"] = "SI";
-            Response.Redirect("~/Principal.aspx");
+            Response.Redirect("Principal.aspx");
 
         }
     }
