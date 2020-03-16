@@ -26,6 +26,7 @@ namespace Proyecto
                     tareasProfesor.Visible = true;
                     mediasAlumnos.Visible = true;
                 }
+                logOut.Visible = true;
             }
             else
             {
@@ -37,6 +38,7 @@ namespace Proyecto
 
                 tareasProfesor.Visible = false;
                 mediasAlumnos.Visible = false;
+                logOut.Visible = false;
 
 
             }

@@ -23,15 +23,22 @@
             <asp:Button ID="Button1" CssClass="btn btn-primary" runat="server" Text="Cargar diagrama" OnClick="Button1_Click" />
         </div>
     <div class="form-group">
-        <asp:Chart ID="Chart1" runat="server" OnLoad="Chart1_Load" Palette="Berry">
+        <asp:Chart ID="Chart1" runat="server" OnLoad="Chart1_Load" Palette="Berry" Width="1221px">
             <Series>
-                <asp:Series Name="Estimadas" BorderColor="Red" Color="Red"></asp:Series>
-                <asp:Series BorderColor="Yellow" ChartArea="ChartArea1" Color="Yellow" Name="Totales">
+                <asp:Series Name="Estimadas" BorderColor="Red" Color="Red" ChartArea="ChartArea1" Legend="Legend1"></asp:Series>
+                <asp:Series BorderColor="Yellow" ChartArea="ChartArea1" Color="Yellow" Name="Totales" Legend="Legend1">
                 </asp:Series>
             </Series>
             <ChartAreas>
-                <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
+                <asp:ChartArea Name="ChartArea1">
+                    <AxisX MaximumAutoSize="100">
+                    </AxisX>
+                </asp:ChartArea>
             </ChartAreas>
+            <Legends>
+                <asp:Legend Name="Legend1">
+                </asp:Legend>
+            </Legends>
         </asp:Chart>
         </div>
     </div>

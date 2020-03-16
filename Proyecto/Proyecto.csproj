@@ -137,6 +137,7 @@
     <Content Include="InsertarTarea.aspx" />
     <Content Include="InstanciarTarea.aspx" />
     <Content Include="IntervaloMedias.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="Principal.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -349,6 +350,13 @@
     </Compile>
     <Compile Include="IntervaloMedias.aspx.designer.cs">
       <DependentUpon>IntervaloMedias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Principal.aspx.cs">
       <DependentUpon>Principal.aspx</DependentUpon>
