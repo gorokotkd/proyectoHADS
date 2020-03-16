@@ -51,7 +51,7 @@ namespace Proyecto
 
                 return;
             }
-            if(dr.GetString(dr.GetOrdinal("tipo")) == "Docente")
+            if(dr.GetString(dr.GetOrdinal("tipo")) == "Profesor")
             {
                 Session["userType"] = "0";
             }
