@@ -24,6 +24,7 @@ namespace Proyecto
                 else
                 {
                     tareasProfesor.Visible = true;
+                    mediasAlumnos.Visible = true;
                 }
             }
             else
@@ -35,6 +36,7 @@ namespace Proyecto
                 tareasAlumno.Visible = false;
 
                 tareasProfesor.Visible = false;
+                mediasAlumnos.Visible = false;
 
 
             }
