@@ -856,11 +856,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\UNIVERSIDAD\\HADS\\proyectoHADS\\Proyecto\\Librerias de Clases\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "E:\\Uni\\3ro\\HADS\\Proyecto\\proyectoHADS\\Proyecto\\Librerias de Clases\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "D:\\UNIVERSIDAD\\HADS\\proyectoHADS\\Proyecto\\Librerias de Clases\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\GARCI\\.nuget\\packages\\",
-      "outputPath": "D:\\UNIVERSIDAD\\HADS\\proyectoHADS\\Proyecto\\Librerias de Clases\\DataAccess\\obj\\",
+      "projectPath": "E:\\Uni\\3ro\\HADS\\Proyecto\\proyectoHADS\\Proyecto\\Librerias de Clases\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\Gorka Alvare\\.nuget\\packages\\",
+      "outputPath": "E:\\Uni\\3ro\\HADS\\Proyecto\\proyectoHADS\\Proyecto\\Librerias de Clases\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\GARCI\\AppData\\Roaming\\NuGet\\NuGet.Config",

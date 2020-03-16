@@ -11,9 +11,6 @@
         <label for="passL">Password</label>
         <asp:TextBox ID="passL" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
     </div>
-    <div class="alert alert-danger" style="display: none" role="alert" id="alert-error">
-        El email o contraseña es incorrecto
-    </div>
 
     <div class="form-group">
         <asp:Button ID="Button1" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="Button1_Click" />

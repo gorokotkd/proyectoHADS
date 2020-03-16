@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\UNIVERSIDAD\\HADS\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\LibreriaClase.csproj": {}
+    "E:\\Uni\\3ro\\HADS\\Proyecto\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\LibreriaClase.csproj": {}
   },
   "projects": {
-    "D:\\UNIVERSIDAD\\HADS\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\LibreriaClase.csproj": {
+    "E:\\Uni\\3ro\\HADS\\Proyecto\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\LibreriaClase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UNIVERSIDAD\\HADS\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\LibreriaClase.csproj",
+        "projectUniqueName": "E:\\Uni\\3ro\\HADS\\Proyecto\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\LibreriaClase.csproj",
         "projectName": "LibreriaClase",
-        "projectPath": "D:\\UNIVERSIDAD\\HADS\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\LibreriaClase.csproj",
-        "packagesPath": "C:\\Users\\GARCI\\.nuget\\packages\\",
-        "outputPath": "D:\\UNIVERSIDAD\\HADS\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\obj\\",
+        "projectPath": "E:\\Uni\\3ro\\HADS\\Proyecto\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\LibreriaClase.csproj",
+        "packagesPath": "C:\\Users\\Gorka Alvare\\.nuget\\packages\\",
+        "outputPath": "E:\\Uni\\3ro\\HADS\\Proyecto\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GARCI\\AppData\\Roaming\\NuGet\\NuGet.Config",

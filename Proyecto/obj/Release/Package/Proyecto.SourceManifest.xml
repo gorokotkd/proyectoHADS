@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="E:\Uni\3ro\HADS\Proyecto\Proyecto\obj\Release\Package\PackageTmp" />
-  <setAcl path="E:\Uni\3ro\HADS\Proyecto\Proyecto\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
-  <setAcl path="E:\Uni\3ro\HADS\Proyecto\Proyecto\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+  <IisApp path="E:\Uni\3ro\HADS\Proyecto\proyectoHADS\Proyecto\obj\Release\Package\PackageTmp" />
+  <setAcl path="E:\Uni\3ro\HADS\Proyecto\proyectoHADS\Proyecto\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="E:\Uni\3ro\HADS\Proyecto\proyectoHADS\Proyecto\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
 </sitemanifest>

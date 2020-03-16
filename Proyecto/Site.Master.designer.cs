@@ -15,6 +15,15 @@ namespace Proyecto
     {
 
         /// <summary>
+        /// Control mainForm.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm mainForm;
+
+        /// <summary>
         /// Control logIn.
         /// </summary>
         /// <remarks>
@@ -42,6 +51,15 @@ namespace Proyecto
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl cambiarPass;
 
         /// <summary>
+        /// Control logOut.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl logOut;
+
+        /// <summary>
         /// Control tareasProfesor.
         /// </summary>
         /// <remarks>
@@ -51,6 +69,15 @@ namespace Proyecto
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl tareasProfesor;
 
         /// <summary>
+        /// Control mediasAlumnos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl mediasAlumnos;
+
+        /// <summary>
         /// Control tareasAlumno.
         /// </summary>
         /// <remarks>
@@ -58,24 +85,6 @@ namespace Proyecto
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl tareasAlumno;
-
-        /// <summary>
-        /// Control insertarTareaProfesor.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl insertarTareaProfesor;
-
-        /// <summary>
-        /// Control instanciarTareaAlumno.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl instanciarTareaAlumno;
 
         /// <summary>
         /// Control MainContent.

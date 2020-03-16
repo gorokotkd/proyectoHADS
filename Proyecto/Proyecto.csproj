@@ -135,7 +135,9 @@
     <Content Include="Global.asax" />
     <Content Include="Inicio.aspx" />
     <Content Include="InsertarTarea.aspx" />
-    <Content Include="MediaAsignaturasG18.aspx" />
+    <Content Include="InstanciarTarea.aspx" />
+    <Content Include="IntervaloMedias.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="Principal.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -335,12 +337,26 @@
     <Compile Include="InsertarTarea.aspx.designer.cs">
       <DependentUpon>InsertarTarea.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MediaAsignaturasG18.aspx.cs">
-      <DependentUpon>MediaAsignaturasG18.aspx</DependentUpon>
+    <Compile Include="InstanciarTarea.aspx.cs">
+      <DependentUpon>InstanciarTarea.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MediaAsignaturasG18.aspx.designer.cs">
-      <DependentUpon>MediaAsignaturasG18.aspx</DependentUpon>
+    <Compile Include="InstanciarTarea.aspx.designer.cs">
+      <DependentUpon>InstanciarTarea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IntervaloMedias.aspx.cs">
+      <DependentUpon>IntervaloMedias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IntervaloMedias.aspx.designer.cs">
+      <DependentUpon>IntervaloMedias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Principal.aspx.cs">
       <DependentUpon>Principal.aspx</DependentUpon>

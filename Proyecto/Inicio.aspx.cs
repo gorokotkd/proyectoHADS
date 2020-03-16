@@ -51,7 +51,7 @@ namespace Proyecto
 
                 return;
             }
-            if(dr.GetString(dr.GetOrdinal("tipo")) == "Docente")
+            if(dr.GetString(dr.GetOrdinal("tipo")) == "Profesor")
             {
                 Session["userType"] = "0";
             }
@@ -67,7 +67,7 @@ namespace Proyecto
 
             Session["email"] = emailL.Text;
             Session["identificado"] = "SI";
-            Response.Redirect("~/Principal.aspx");
+            Response.Redirect("Principal.aspx");
 
         }
     }

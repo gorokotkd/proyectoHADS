@@ -1,2 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters />
+<parameters>
+  <parameter name="AmigosConnectionString-Web.config Connection String" description="AmigosConnectionString Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=tcp:hads.database.windows.net,1433;Initial Catalog=Amigos;Persist Security Info=True;User ID=vadillo@ehu.es@hads;Password=curso19-20" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\Uni\\3ro\\HADS\\Proyecto\\proyectoHADS\\Proyecto\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AmigosConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

@@ -19,7 +19,7 @@
     <link href="~/Content/style.css" rel="stylesheet">
 </head>
 <body>
-    <form runat="server">
+    <form runat="server" id="mainForm">
         <asp:ScriptManager runat="server">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
@@ -60,18 +60,18 @@
                     <li class="nav-item" id="cambiarPass" runat="server">
                         <a class="nav-link" href="CambiarPassword.aspx">Cambiar Contraseña</a>
                     </li>
+                    <li class="nav-item" id="logOut" runat="server" visible="false">
+                        <a class="nav-link" href="Logout.aspx">Log Out</a>
+                    </li>
                     <!-- Paginas para usuarios registrados -->
                     <li class="nav-item" id="tareasProfesor" runat="server" visible="false">
                         <a class="nav-link" href="TareasProfesor.aspx">Ver Tareas</a>
                     </li>
+                    <li class="nav-item" id="mediasAlumnos" runat="server" visible="false">
+                        <a class="nav-link" href="IntervaloMedias.aspx">Ver Dedicación Media</a>
+                    </li>
                     <li class="nav-item" id="tareasAlumno" runat="server" visible="false">
                         <a class="nav-link" href="TareasAlumno.aspx">Ver Tareas</a>
-                    </li>
-                    <li class="nav-item" id="insertarTareaProfesor" runat="server" visible="false">
-                        <a class="nav-link" href="InsertarTarea.aspx">Insertar Tareas</a>
-                    </li>
-                    <li class="nav-item" id="instanciarTareaAlumno" runat="server" visible="false">
-                        <a class="nav-link" href="InstanciarTarea.aspx">Instanciar Tareas</a>
                     </li>
                 </ul>
                 </div>
