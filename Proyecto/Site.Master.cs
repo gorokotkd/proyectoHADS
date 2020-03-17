@@ -25,6 +25,8 @@ namespace Proyecto
                 {
                     tareasProfesor.Visible = true;
                     mediasAlumnos.Visible = true;
+                    importarXml.Visible = true;
+                    exportarTareas.Visible = true;
                 }
                 logOut.Visible = true;
             }
@@ -38,6 +40,9 @@ namespace Proyecto
 
                 tareasProfesor.Visible = false;
                 mediasAlumnos.Visible = false;
+                importarXml.Visible = false;
+                exportarTareas.Visible = false;
+
                 logOut.Visible = false;
 
 
