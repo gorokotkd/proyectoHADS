@@ -1283,19 +1283,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gorka Alvare\\.nuget\\packages\\": {}
+    "C:\\Users\\g_alv\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Uni\\3ro\\HADS\\Proyecto\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\LibreriaClase.csproj",
+      "projectUniqueName": "J:\\Datos\\HADS\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\LibreriaClase.csproj",
       "projectName": "LibreriaClase",
-      "projectPath": "E:\\Uni\\3ro\\HADS\\Proyecto\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\LibreriaClase.csproj",
-      "packagesPath": "C:\\Users\\Gorka Alvare\\.nuget\\packages\\",
-      "outputPath": "E:\\Uni\\3ro\\HADS\\Proyecto\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\obj\\",
+      "projectPath": "J:\\Datos\\HADS\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\LibreriaClase.csproj",
+      "packagesPath": "C:\\Users\\g_alv\\.nuget\\packages\\",
+      "outputPath": "J:\\Datos\\HADS\\proyectoHADS\\Proyecto\\Librerias de Clases\\LIbreriaClase\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Gorka Alvare\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\g_alv\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1344,7 +1344,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
       }
     }
   },

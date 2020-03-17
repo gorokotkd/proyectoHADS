@@ -78,6 +78,24 @@ namespace Proyecto
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl mediasAlumnos;
 
         /// <summary>
+        /// Control importarXml.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl importarXml;
+
+        /// <summary>
+        /// Control exportarTareas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl exportarTareas;
+
+        /// <summary>
         /// Control tareasAlumno.
         /// </summary>
         /// <remarks>
