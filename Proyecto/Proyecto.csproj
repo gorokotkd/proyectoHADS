@@ -121,6 +121,9 @@
     <Content Include="About.aspx" />
     <Content Include="App_Data\HAS.xml" />
     <Content Include="App_Data\SEG.xml" />
+    <Content Include="App_Data\XSLTByCodigo.xslt" />
+    <Content Include="App_Data\XSLTByDescripcion.xslt" />
+    <Content Include="App_Data\XSLTByHEstimadas.xslt" />
     <Content Include="App_Data\XSLTFile.xsl" />
     <Content Include="CambiarPassword.aspx" />
     <Content Include="Confirmar.aspx" />

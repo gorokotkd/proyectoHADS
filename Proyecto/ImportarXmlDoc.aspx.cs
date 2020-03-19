@@ -19,7 +19,7 @@ namespace Proyecto
             
         }
 
-        private void cargarTabla()
+        private void cargarTabla(String orderByStr)
         {
             try
             {
@@ -29,7 +29,7 @@ namespace Proyecto
                 if (File.Exists(Server.MapPath("App_Data/" + asignaturas.SelectedValue + ".xml")))
                 {
                     Xml1.DocumentSource = Server.MapPath("App_Data/" + asignaturas.SelectedValue + ".xml");
-                    Xml1.TransformSource = Server.MapPath("App_Data/XSLTFile.xsl");
+                    Xml1.TransformSource = Server.MapPath("App_Data/XSLTBy" + orderByStr + ".xslt");
                 }
                 else
                 {
@@ -107,7 +107,12 @@ namespace Proyecto
 
         protected void asignaturas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cargarTabla();
+            cargarTabla("Codigo");
+        }
+
+        protected void orderBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cargarTabla(orderBy.SelectedValue);
         }
     }
 }

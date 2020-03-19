@@ -26,10 +26,20 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
             </div>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <div class="form-group">
+                <asp:Label ID="orderLabel" runat="server" Text="Ordenar Por"></asp:Label>
+                <asp:DropDownList ID="orderBy" runat="server" CssClass="form-control" OnSelectedIndexChanged="orderBy_SelectedIndexChanged" AutoPostBack="true">
+                    <asp:ListItem Text="Código" Enabled="true" Value="Codigo"></asp:ListItem>
+                    <asp:ListItem Text="Descripción" Value="Descripcion"></asp:ListItem>
+                    <asp:ListItem Text="Horas Estimadas" Value="HEstimadas"></asp:ListItem>
+                </asp:DropDownList>
+
+            </div>
         </div>
         <div class="row">
             <div class="form-group">
-                <asp:Button ID="importar" runat="server" Text="Button" CssClass="btn btn-primary" OnClick="importar_Click" />
+                <asp:Button ID="importar" runat="server" Text="Importar" CssClass="btn btn-primary" OnClick="importar_Click" />
             </div>
         </div>
         <div class="row">
