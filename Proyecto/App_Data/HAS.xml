@@ -1,15 +1,7 @@
-<?xml version="1.0" standalone="yes" ?>
-<tareas  xmlns:has="http://ji.ehu.es/has">
-  <tarea codigo= "HAS20G18-Test1">
-    <descripcion>Test 1 de la asignatura</descripcion>
-    <hestimadas>1</hestimadas>
-    <explotacion>false</explotacion>
-    <tipotarea>Examen</tipotarea>
-  </tarea>
-  <tarea codigo="HAS20G18-Lab4">
-    <descripcion>Laboratorio sobre XML</descripcion>
-    <hestimadas>12</hestimadas>
-    <explotacion>true</explotacion>
-    <tipotarea>Laboratorio</tipotarea>
-  </tarea>
-</tareas>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tareas xmlns:has="http://ji.ehu.es/has">
+<tarea codigo="HAS08-Lab12"><descripcion>Laboratorio 12 de la asignatura</descripcion><hestimadas>12</hestimadas><explotacion>True</explotacion><tipotarea>Laboratorio</tipotarea></tarea>
+<tarea codigo="HAS08-Test5"><descripcion>Test 5 de la asignatura</descripcion><hestimadas>3</hestimadas><explotacion>False</explotacion><tipotarea>examen</tipotarea></tarea>
+<tarea codigo="HAS20G18-Lab4"><descripcion>Laboratorio sobre XML</descripcion><hestimadas>12</hestimadas><explotacion>True</explotacion><tipotarea>Laboratorio</tipotarea></tarea>
+<tarea codigo="HAS20G18-Test1"><descripcion>Test 1 de la asignatura</descripcion><hestimadas>1</hestimadas><explotacion>False</explotacion><tipotarea>Examen</tipotarea></tarea>
+<tarea codigo="HAS20-Lab4"><descripcion>Labo 4</descripcion><hestimadas>6</hestimadas><explotacion>True</explotacion><tipotarea>Laboratorio</tipotarea></tarea></tareas>

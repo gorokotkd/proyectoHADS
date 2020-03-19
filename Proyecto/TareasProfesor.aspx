@@ -16,8 +16,14 @@
 
         <div class="form-group">
             <asp:Label ID="Label1" for="Select1" runat="server" Text="Seleccionar Asignaturas"></asp:Label>
-            <asp:DropDownList ID="asignaturas" CssClass="form-control" runat="server" DataSourceID="SqlDataSource1" DataTextField="codigo" DataValueField="codigo" AutoPostBack="True"></asp:DropDownList>
-            <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:AmigosConnectionString %>' SelectCommand="SELECT [codigo] FROM [Asignaturas]"></asp:SqlDataSource>
+            <asp:DropDownList ID="asignaturas" CssClass="form-control" runat="server" DataSourceID="SqlDataSource1" DataTextField="codigo" DataValueField="codigo" AutoPostBack="True" AppendDataBoundItems="True">
+                <asp:ListItem Enabled="true" Text="-- Selecciona una asignatura. --"></asp:ListItem>
+            </asp:DropDownList>
+            <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:AmigosConnectionString %>' SelectCommand="SELECT Asignaturas.codigo FROM Asignaturas INNER JOIN GruposClase ON Asignaturas.codigo = GruposClase.codigoasig INNER JOIN ProfesoresGrupo ON GruposClase.codigo = ProfesoresGrupo.codigogrupo WHERE (ProfesoresGrupo.email = @email)">
+                <SelectParameters>
+                    <asp:SessionParameter SessionField="email" Name="email" Type="String"></asp:SessionParameter>
+                </SelectParameters>
+            </asp:SqlDataSource>
         </div>
 
         <div class="form-group">

@@ -16,7 +16,9 @@
 
         <div class="form-group">
             <asp:Label ID="Label2" runat="server" Text="Elige email, solo se muestran aquellos que han realizado alguna tarea."></asp:Label>
-            <asp:DropDownList ID="emailList" runat="server" CssClass="form-control" DataSourceID="SqlDataSource1" DataTextField="Email" DataValueField="Email"></asp:DropDownList>
+            <asp:DropDownList ID="emailList" runat="server" CssClass="form-control" DataSourceID="SqlDataSource1" DataTextField="Email" DataValueField="Email" AppendDataBoundItems="True">
+                <asp:ListItem Enabled="true" Text="-- Selecciona un email. --"></asp:ListItem>
+            </asp:DropDownList>
             <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:AmigosConnectionString %>' SelectCommand="SELECT DISTINCT [Email] FROM [EstudiantesTareas]"></asp:SqlDataSource>
         </div>
         <div class="form-group">
