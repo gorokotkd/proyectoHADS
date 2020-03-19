@@ -1,0 +1,18 @@
+{
+  "Table1": [
+    {
+      "codigo": "ISO20-Lab1",
+      "descripcion": "Lab 1",
+      "hestimadas": 12,
+      "explotacion": true,
+      "tipotarea": "Ejercicio"
+    },
+    {
+      "codigo": "ISO20-Test2",
+      "descripcion": "Segundo examen ",
+      "hestimadas": 2,
+      "explotacion": true,
+      "tipotarea": "Examen"
+    }
+  ]
+}

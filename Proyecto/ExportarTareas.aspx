@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ExportarTareas.aspx.cs" Inherits="Proyecto.ExportarTareas" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="container" selected="True">
+    <div class="container">
         <div class="row">
             <div class="container">
                 <div class="row">
@@ -32,8 +32,9 @@
             <div class="form-group">
                 <asp:Button ID="exportarXml" runat="server" Text="Exportar a XML" CssClass="btn btn-primary" OnClick="exportarXml_Click" />
             </div>
+            &nbsp
             <div class="form-group">
-                <asp:Button ID="exportarJson" runat="server" Text="Exportar a JSON" Enabled="false" CssClass="btn btn-primar" />
+                <asp:Button ID="exportarJson" runat="server" Text="Exportar a JSON" Enabled="true" CssClass="btn btn-secondary" OnClick="exportarJson_Click" />
             </div>
         </div>
         <div class="row">

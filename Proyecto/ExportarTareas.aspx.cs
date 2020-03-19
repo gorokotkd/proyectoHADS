@@ -11,6 +11,7 @@ using System.IO;
 using System.Text;
 using System.Xml;
 using System.Data.Common;
+using Newtonsoft.Json;
 
 namespace Proyecto
 {
@@ -26,19 +27,11 @@ namespace Proyecto
             infoSeleccionarAsig.Visible = false;
             errorCrearArchivo.Visible = false;
             archicoCreado.Visible = false;
+
             string sql = "SELECT * FROM TareasGenericas WHERE CodAsig='"+asignaturas.SelectedValue+"'";
             SqlConnection connection = new SqlConnection(DataAccess.DataAccess.CONNECTION_STRING);
             SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
-    /*        DataTableMapping tableMapping =
-                    adapter.TableMappings.Add("TareasGenericas", "tarea");
-            tableMapping.ColumnMappings.Add("Descripcion", "descripcion");
-            tableMapping.ColumnMappings.Add("HEstimadas", "hestimadas");
-            tableMapping.ColumnMappings.Add("Explotacion", "explotacion");
-            tableMapping.ColumnMappings.Add("TipoTarea", "tipotarea");*/
 
-
-            //    DataTable table = new DataTable();
-            //   adapter.Fill(table);
             DataSet ds = new DataSet();
             adapter.Fill(ds, "tarea");
             Session["tablaTareas"] = ds;
@@ -117,6 +110,61 @@ namespace Proyecto
             xr.WriteEndElement();
             xr.Flush();
             xr.Close();
+        }
+
+        protected void exportarJson_Click(object sender, EventArgs e)
+        {
+            if (asignaturas.SelectedValue != "-1")
+            {
+                string path = "App_Data/" + asignaturas.SelectedValue + ".json";
+                //String json = Datos.Interfaz.GetDSJSon(dst.vista_portada, "dsEjemplo");
+                DataSet ds = (DataSet)Session["tablaTareas"];
+                String text = "";
+                for (int i = 0; i < ds.Tables.Count; i++)
+                {
+                    text += GetDSJSon(ds.Tables[i], "");
+                }
+                System.IO.File.WriteAllText(Server.MapPath(path), text);
+            }
+            else
+            {
+                infoSeleccionarAsig.Visible = true;
+                errorCrearArchivo.Visible = false;
+                archicoCreado.Visible = false;
+            }
+           
+        }
+        public String GetDSJSon(System.Data.DataTable tabla_origen, String nombre)
+        {
+            DataSet dsGenerado = new DataSet("dataSet");
+            dsGenerado.Namespace = "NetFrameWork";
+            DataTable tabla = new DataTable();
+            tabla.TableName = "";
+        /*    for (int i = 0; i < tabla_origen.Columns.Count; i++)
+            {
+                DataColumn columna = new DataColumn(tabla_origen.Columns[i].ColumnName, tabla_origen.Columns[i].DataType);
+                tabla.Columns.Add(columna);
+            }*/
+            tabla.Columns.Add(new DataColumn("codigo", tabla_origen.Columns[0].DataType));
+            tabla.Columns.Add(new DataColumn("descripcion", tabla_origen.Columns[1].DataType));
+            tabla.Columns.Add(new DataColumn("hestimadas", tabla_origen.Columns[3].DataType));
+            tabla.Columns.Add(new DataColumn("explotacion", tabla_origen.Columns[4].DataType));
+            tabla.Columns.Add(new DataColumn("tipotarea", tabla_origen.Columns[5].DataType));
+
+            dsGenerado.Tables.Add(tabla);
+            for (int i = 0; i < tabla_origen.Rows.Count; i++)
+            {
+                DataRow newRow = tabla.NewRow();
+                newRow["codigo"] = tabla_origen.Rows[i][0];
+                newRow["descripcion"] = tabla_origen.Rows[i][1];
+                newRow["hestimadas"] = tabla_origen.Rows[i][3];
+                newRow["explotacion"] = tabla_origen.Rows[i][4];
+                newRow["tipotarea"] = tabla_origen.Rows[i][5];
+                tabla.Rows.Add(newRow);
+            }
+            dsGenerado.AcceptChanges();
+            string json = JsonConvert.SerializeObject(dsGenerado, Newtonsoft.Json.Formatting.Indented);
+            return json;
         }
     }
 }
