@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ImportarXmlDoc.aspx.cs" Inherits="Proyecto.ImportarXmlDoc" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ImportarDataSet.aspx.cs" Inherits="Proyecto.ImportarDataSet" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="container">
+        <div class="container">
         <div class="row">
             <div class="container">
                 <div class="row">
@@ -9,7 +9,7 @@
                     </div>
                 </div>
                 <div class="col-md-12 text-center">
-                    <h1 class="display-3">IMPORTAR TAREAS GENÉRICAS</</h1>
+                    <h1 class="display-3">IMPORTAR TAREAS GENÉRICAS vDataSet</</h1>
                 </div>
             </div>
         </div>
@@ -18,23 +18,13 @@
             <div class="form-group">
                 <asp:Label ID="asignaturasLabel" runat="server" Text="Selecciona una asignatura"></asp:Label>
                 <asp:DropDownList ID="asignaturas" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="asignaturas_SelectedIndexChanged" DataSourceID="SqlDataSource1" DataTextField="codigo" DataValueField="codigo" AppendDataBoundItems="True">
-                    <asp:ListItem Enabled="true" Text="-- Selecciona una asignatura. --" Value="-1"></asp:ListItem>
+                    <asp:ListItem Enabled="true" Text="-- Selecciona una asignatura. --"></asp:ListItem>
                 </asp:DropDownList>
                 <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:AmigosConnectionString %>' SelectCommand="SELECT Asignaturas.codigo FROM Asignaturas INNER JOIN GruposClase ON Asignaturas.codigo = GruposClase.codigoasig INNER JOIN ProfesoresGrupo ON GruposClase.codigo = ProfesoresGrupo.codigogrupo WHERE (ProfesoresGrupo.email = @email)">
                     <SelectParameters>
                         <asp:SessionParameter SessionField="email" Name="email"></asp:SessionParameter>
                     </SelectParameters>
                 </asp:SqlDataSource>
-            </div>
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            <div class="form-group">
-                <asp:Label ID="orderLabel" runat="server" Text="Ordenar Por"></asp:Label>
-                <asp:DropDownList ID="orderBy" runat="server" CssClass="form-control" OnSelectedIndexChanged="orderBy_SelectedIndexChanged" AutoPostBack="true">
-                    <asp:ListItem Text="Código" Enabled="true" Value="Codigo"></asp:ListItem>
-                    <asp:ListItem Text="Descripción" Value="Descripcion"></asp:ListItem>
-                    <asp:ListItem Text="Horas Estimadas" Value="HEstimadas"></asp:ListItem>
-                </asp:DropDownList>
-
             </div>
         </div>
         <div class="row">
@@ -58,12 +48,11 @@
         <div runat="server" class="alert alert-danger" role="alert" id="errorImportar" visible="false">
             Ha habido un error al importar las tareas, prueba de nuevo mas tarde.
         </div>
-        <div runat="server" class="alert alert-danger" role="alert" id="tareasYaImportadas" visible="false">
-            Una o mas tareas del xml ya estan importadas en el xml.
-        </div>
         <div runat="server" class="alert alert-success" role="alert" id="todoGuayAlert" visible="false">
             Tarea almacenada correctamente.
         </div>
+        <div runat="server" class="alert alert-danger" role="alert" id="tareasYaImportadas" visible="false">
+            Una o mas tareas del xml ya estan importadas en el xml.
+        </div>
     </div>
-
 </asp:Content>

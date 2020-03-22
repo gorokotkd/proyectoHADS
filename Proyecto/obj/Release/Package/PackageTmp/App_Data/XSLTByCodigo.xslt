@@ -14,7 +14,7 @@
             <th>HORAS EST.</th>
           </tr>
           <xsl:for-each select="./tarea">
-            <xsl:sort select="./hestimadas"/>
+            <xsl:sort select="./@codigo"/>
             <tr>
               <td>
                 <xsl:value-of select="./@codigo"/>
@@ -32,4 +32,3 @@
     </html>
   </xsl:template>
 </xsl:stylesheet> 
-

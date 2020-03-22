@@ -30,7 +30,7 @@ namespace LibreriaClase
             mensaje.Body = msg;
             SmtpClient cliente = new SmtpClient("smtp.ehu.eus", 587)
             {
-                Credentials = new NetworkCredential("galvarez024@ikasle.ehu.eus", "Galvarez2"),
+                Credentials = new NetworkCredential("galvarez024@ikasle.ehu.eus", "********"),
                 EnableSsl = true
             };
 

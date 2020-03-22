@@ -27,6 +27,7 @@ namespace Proyecto
                     mediasAlumnos.Visible = true;
                     importarXml.Visible = true;
                     exportarTareas.Visible = true;
+                    importarDataSet.Visible = true;
                 }
                 logOut.Visible = true;
             }
@@ -42,6 +43,7 @@ namespace Proyecto
                 mediasAlumnos.Visible = false;
                 importarXml.Visible = false;
                 exportarTareas.Visible = false;
+                importarDataSet.Visible = false;
 
                 logOut.Visible = false;
 

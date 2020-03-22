@@ -73,6 +73,9 @@
                     <li class="nav-item" id="importarXml" runat="server" visible="false">
                         <a class="nav-link" href="ImportarXmlDoc.aspx">Importar Tareas (XMLDoc)</a>
                     </li>
+                    <li class="nav-item" id="importarDataSet" runat="server" visible="false">
+                        <a class="nav-link" href="ImportarDataSet.aspx">Importar Tareas (DataSet)</a>
+                    </li>
                     <li class="nav-item" id="exportarTareas" runat="server" visible="false">
                         <a class="nav-link" href="ExportarTareas.aspx">Exportar Tareas</a>
                     </li>

@@ -33,7 +33,7 @@ namespace Proyecto
             SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
 
             DataSet ds = new DataSet();
-            adapter.Fill(ds, "tarea");
+            adapter.Fill(ds, "Tareas");
             Session["tablaTareas"] = ds;
             Session["adapterTareas"] = adapter;
             GridView1.DataSource = ds;
@@ -46,7 +46,7 @@ namespace Proyecto
             {
                 string path = "App_Data/" + asignaturas.SelectedValue + ".xml";
                 if (!File.Exists(Server.MapPath(path)))
-                {//El archivo no existe, creo el archivo y escribo en él
+                {//El archivo no existe, creo el archivo.
                     try
                     {
                         File.Create(Server.MapPath(path)).Close();
@@ -92,20 +92,16 @@ namespace Proyecto
             xr.WriteStartElement("tareas");
             xr.WriteAttributeString("xmlns", "has", null, "http://ji.ehu.es/has");
 
-            for(int i = 0; i < ds.Tables.Count; i++)
-            {//Cada tabla es un elemento tarea
-                DataTable dt = ds.Tables[i];
+            DataTable dt = ds.Tables[0];
                 
-                 for (int k = 0; k < dt.Rows.Count; k++) {
-                    xr.WriteStartElement("tarea");
-                    xr.WriteAttributeString("codigo", dt.Rows[k][0].ToString());
-                    xr.WriteElementString("descripcion", dt.Rows[k][1].ToString());
-                    xr.WriteElementString("hestimadas", dt.Rows[k][3].ToString());
-                    xr.WriteElementString("explotacion", dt.Rows[k][4].ToString());
-                    xr.WriteElementString("tipotarea", dt.Rows[k][5].ToString());
-                    xr.WriteEndElement();
-                }
-                
+            for (int k = 0; k < dt.Rows.Count; k++) {
+                xr.WriteStartElement("tarea");
+                xr.WriteAttributeString("codigo", dt.Rows[k][0].ToString());
+                xr.WriteElementString("descripcion", dt.Rows[k][1].ToString());
+                xr.WriteElementString("hestimadas", dt.Rows[k][3].ToString());
+                xr.WriteElementString("explotacion", dt.Rows[k][4].ToString());
+                xr.WriteElementString("tipotarea", dt.Rows[k][5].ToString());
+                xr.WriteEndElement();
             }
             xr.WriteEndElement();
             xr.Flush();
@@ -117,41 +113,40 @@ namespace Proyecto
             if (asignaturas.SelectedValue != "-1")
             {
                 string path = "App_Data/" + asignaturas.SelectedValue + ".json";
-                //String json = Datos.Interfaz.GetDSJSon(dst.vista_portada, "dsEjemplo");
+
                 DataSet ds = (DataSet)Session["tablaTareas"];
-                String text = "";
-                for (int i = 0; i < ds.Tables.Count; i++)
-                {
-                    text += GetDSJSon(ds.Tables[i], "");
+                try {
+                    File.WriteAllText(Server.MapPath(path), GetDSJSon(ds.Tables[0]));
+                    infoSeleccionarAsig.Visible = false;
+                    errorCrearArchivoJson.Visible = false;
+                    archicoCreadoJson.Visible = true;
                 }
-                System.IO.File.WriteAllText(Server.MapPath(path), text);
+                catch(Exception)
+                {
+                    infoSeleccionarAsig.Visible = false;
+                    errorCrearArchivoJson.Visible = true;
+                    archicoCreadoJson.Visible = false;
+                }
+
             }
             else
             {
                 infoSeleccionarAsig.Visible = true;
-                errorCrearArchivo.Visible = false;
-                archicoCreado.Visible = false;
+                errorCrearArchivoJson.Visible = false;
+                archicoCreadoJson.Visible = false;
             }
            
         }
-        public String GetDSJSon(System.Data.DataTable tabla_origen, String nombre)
+        private String GetDSJSon(DataTable tabla_origen)
         {
-            DataSet dsGenerado = new DataSet("dataSet");
-            dsGenerado.Namespace = "NetFrameWork";
             DataTable tabla = new DataTable();
-            tabla.TableName = "";
-        /*    for (int i = 0; i < tabla_origen.Columns.Count; i++)
-            {
-                DataColumn columna = new DataColumn(tabla_origen.Columns[i].ColumnName, tabla_origen.Columns[i].DataType);
-                tabla.Columns.Add(columna);
-            }*/
+
             tabla.Columns.Add(new DataColumn("codigo", tabla_origen.Columns[0].DataType));
             tabla.Columns.Add(new DataColumn("descripcion", tabla_origen.Columns[1].DataType));
             tabla.Columns.Add(new DataColumn("hestimadas", tabla_origen.Columns[3].DataType));
             tabla.Columns.Add(new DataColumn("explotacion", tabla_origen.Columns[4].DataType));
             tabla.Columns.Add(new DataColumn("tipotarea", tabla_origen.Columns[5].DataType));
 
-            dsGenerado.Tables.Add(tabla);
             for (int i = 0; i < tabla_origen.Rows.Count; i++)
             {
                 DataRow newRow = tabla.NewRow();
@@ -162,8 +157,7 @@ namespace Proyecto
                 newRow["tipotarea"] = tabla_origen.Rows[i][5];
                 tabla.Rows.Add(newRow);
             }
-            dsGenerado.AcceptChanges();
-            string json = JsonConvert.SerializeObject(dsGenerado, Newtonsoft.Json.Formatting.Indented);
+            string json = JsonConvert.SerializeObject(tabla, Newtonsoft.Json.Formatting.Indented);
             return json;
         }
     }

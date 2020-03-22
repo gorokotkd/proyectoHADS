@@ -14,3 +14,12 @@ C:\Users\Gorka Alvare\Desktop\LIbreriaClase\obj\Debug\netstandard2.0\LibreriaCla
 C:\Users\Gorka Alvare\Desktop\LIbreriaClase\bin\Debug\netstandard2.0\LibreriaClase.deps.json
 C:\Users\Gorka Alvare\Desktop\LIbreriaClase\bin\Debug\netstandard2.0\LibreriaClase.dll
 C:\Users\Gorka Alvare\Desktop\LIbreriaClase\bin\Debug\netstandard2.0\LibreriaClase.pdb
+J:\Datos\HADS\proyectoHADS\Proyecto\Librerias de Clases\LIbreriaClase\bin\Debug\netstandard2.0\LibreriaClase.deps.json
+J:\Datos\HADS\proyectoHADS\Proyecto\Librerias de Clases\LIbreriaClase\bin\Debug\netstandard2.0\LibreriaClase.dll
+J:\Datos\HADS\proyectoHADS\Proyecto\Librerias de Clases\LIbreriaClase\bin\Debug\netstandard2.0\LibreriaClase.pdb
+J:\Datos\HADS\proyectoHADS\Proyecto\Librerias de Clases\LIbreriaClase\obj\Debug\netstandard2.0\LibreriaClase.csprojAssemblyReference.cache
+J:\Datos\HADS\proyectoHADS\Proyecto\Librerias de Clases\LIbreriaClase\obj\Debug\netstandard2.0\LibreriaClase.csproj.CoreCompileInputs.cache
+J:\Datos\HADS\proyectoHADS\Proyecto\Librerias de Clases\LIbreriaClase\obj\Debug\netstandard2.0\LibreriaClase.AssemblyInfoInputs.cache
+J:\Datos\HADS\proyectoHADS\Proyecto\Librerias de Clases\LIbreriaClase\obj\Debug\netstandard2.0\LibreriaClase.AssemblyInfo.cs
+J:\Datos\HADS\proyectoHADS\Proyecto\Librerias de Clases\LIbreriaClase\obj\Debug\netstandard2.0\LibreriaClase.dll
+J:\Datos\HADS\proyectoHADS\Proyecto\Librerias de Clases\LIbreriaClase\obj\Debug\netstandard2.0\LibreriaClase.pdb

@@ -140,6 +140,7 @@
     <Content Include="ExportarTareas.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="ImportarDataSet.aspx" />
     <Content Include="ImportarXmlDoc.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="InsertarTarea.aspx" />
@@ -342,6 +343,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ImportarDataSet.aspx.cs">
+      <DependentUpon>ImportarDataSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportarDataSet.aspx.designer.cs">
+      <DependentUpon>ImportarDataSet.aspx</DependentUpon>
     </Compile>
     <Compile Include="ImportarXmlDoc.aspx.cs">
       <DependentUpon>ImportarXmlDoc.aspx</DependentUpon>

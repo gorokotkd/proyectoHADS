@@ -47,6 +47,12 @@
             <div runat="server" class="alert alert-success" role="alert" id="archicoCreado" visible="false">
                 El fichero XML se ha creado correctamente en la carpeta \\ App_Data //
             </div>
+            <div runat="server" class="alert alert-success" role="alert" id="archicoCreadoJson" visible="false">
+                El fichero JSON se ha creado correctamente en la carpeta \\ App_Data //
+            </div>
+            <div runat="server" class="alert alert-danger" role="alert" id="errorCrearArchivoJson" visible="false">
+                Ha habido algún error al crear el fichero JSON.
+            </div>
         </div>
         <div class="row">
             <div class="form-group">

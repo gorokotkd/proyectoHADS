@@ -11,115 +11,97 @@ namespace Proyecto
 {
 
 
-    public partial class SiteMaster
+    public partial class ImportarDataSet
     {
 
         /// <summary>
-        /// Control mainForm.
+        /// Control asignaturasLabel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm mainForm;
+        protected global::System.Web.UI.WebControls.Label asignaturasLabel;
 
         /// <summary>
-        /// Control logIn.
+        /// Control asignaturas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl logIn;
+        protected global::System.Web.UI.WebControls.DropDownList asignaturas;
 
         /// <summary>
-        /// Control registro.
+        /// Control SqlDataSource1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl registro;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
-        /// Control cambiarPass.
+        /// Control importar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cambiarPass;
+        protected global::System.Web.UI.WebControls.Button importar;
 
         /// <summary>
-        /// Control logOut.
+        /// Control errorArchivo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl logOut;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorArchivo;
 
         /// <summary>
-        /// Control tareasProfesor.
+        /// Control errorGeneral.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tareasProfesor;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorGeneral;
 
         /// <summary>
-        /// Control mediasAlumnos.
+        /// Control Xml1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl mediasAlumnos;
+        protected global::System.Web.UI.WebControls.Xml Xml1;
 
         /// <summary>
-        /// Control importarXml.
+        /// Control errorImportar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl importarXml;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorImportar;
 
         /// <summary>
-        /// Control importarDataSet.
+        /// Control todoGuayAlert.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl importarDataSet;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl todoGuayAlert;
 
         /// <summary>
-        /// Control exportarTareas.
+        /// Control tareasYaImportadas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl exportarTareas;
-
-        /// <summary>
-        /// Control tareasAlumno.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tareasAlumno;
-
-        /// <summary>
-        /// Control MainContent.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tareasYaImportadas;
     }
 }
