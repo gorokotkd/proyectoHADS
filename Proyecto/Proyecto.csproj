@@ -137,15 +137,15 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\style.css" />
     <Content Include="Default.aspx" />
-    <Content Include="ExportarTareas.aspx" />
+    <Content Include="Profesores\Vadillo\ExportarTareas.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="ImportarDataSet.aspx" />
-    <Content Include="ImportarXmlDoc.aspx" />
+    <Content Include="Profesores\Vadillo\ImportarDataSet.aspx" />
+    <Content Include="Profesores\Vadillo\ImportarXmlDoc.aspx" />
     <Content Include="Inicio.aspx" />
-    <Content Include="InsertarTarea.aspx" />
-    <Content Include="InstanciarTarea.aspx" />
-    <Content Include="IntervaloMedias.aspx" />
+    <Content Include="Profesores\InsertarTarea.aspx" />
+    <Content Include="Alumnos\InstanciarTarea.aspx" />
+    <Content Include="Profesores\IntervaloMedias.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Principal.aspx" />
     <Content Include="Registro.aspx" />
@@ -279,8 +279,8 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="TareasAlumno.aspx" />
-    <Content Include="TareasProfesor.aspx" />
+    <Content Include="Alumnos\TareasAlumno.aspx" />
+    <Content Include="Profesores\TareasProfesor.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -334,28 +334,28 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ExportarTareas.aspx.cs">
+    <Compile Include="Profesores\Vadillo\ExportarTareas.aspx.cs">
       <DependentUpon>ExportarTareas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ExportarTareas.aspx.designer.cs">
+    <Compile Include="Profesores\Vadillo\ExportarTareas.aspx.designer.cs">
       <DependentUpon>ExportarTareas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="ImportarDataSet.aspx.cs">
+    <Compile Include="Profesores\Vadillo\ImportarDataSet.aspx.cs">
       <DependentUpon>ImportarDataSet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ImportarDataSet.aspx.designer.cs">
+    <Compile Include="Profesores\Vadillo\ImportarDataSet.aspx.designer.cs">
       <DependentUpon>ImportarDataSet.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ImportarXmlDoc.aspx.cs">
+    <Compile Include="Profesores\Vadillo\ImportarXmlDoc.aspx.cs">
       <DependentUpon>ImportarXmlDoc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ImportarXmlDoc.aspx.designer.cs">
+    <Compile Include="Profesores\Vadillo\ImportarXmlDoc.aspx.designer.cs">
       <DependentUpon>ImportarXmlDoc.aspx</DependentUpon>
     </Compile>
     <Compile Include="Inicio.aspx.cs">
@@ -365,25 +365,25 @@
     <Compile Include="Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
     </Compile>
-    <Compile Include="InsertarTarea.aspx.cs">
+    <Compile Include="Profesores\InsertarTarea.aspx.cs">
       <DependentUpon>InsertarTarea.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="InsertarTarea.aspx.designer.cs">
+    <Compile Include="Profesores\InsertarTarea.aspx.designer.cs">
       <DependentUpon>InsertarTarea.aspx</DependentUpon>
     </Compile>
-    <Compile Include="InstanciarTarea.aspx.cs">
+    <Compile Include="Alumnos\InstanciarTarea.aspx.cs">
       <DependentUpon>InstanciarTarea.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="InstanciarTarea.aspx.designer.cs">
+    <Compile Include="Alumnos\InstanciarTarea.aspx.designer.cs">
       <DependentUpon>InstanciarTarea.aspx</DependentUpon>
     </Compile>
-    <Compile Include="IntervaloMedias.aspx.cs">
+    <Compile Include="Profesores\IntervaloMedias.aspx.cs">
       <DependentUpon>IntervaloMedias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="IntervaloMedias.aspx.designer.cs">
+    <Compile Include="Profesores\IntervaloMedias.aspx.designer.cs">
       <DependentUpon>IntervaloMedias.aspx</DependentUpon>
     </Compile>
     <Compile Include="Logout.aspx.cs">
@@ -422,18 +422,18 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="TareasAlumno.aspx.cs">
+    <Compile Include="Alumnos\TareasAlumno.aspx.cs">
       <DependentUpon>TareasAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TareasAlumno.aspx.designer.cs">
+    <Compile Include="Alumnos\TareasAlumno.aspx.designer.cs">
       <DependentUpon>TareasAlumno.aspx</DependentUpon>
     </Compile>
-    <Compile Include="TareasProfesor.aspx.cs">
+    <Compile Include="Profesores\TareasProfesor.aspx.cs">
       <DependentUpon>TareasProfesor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TareasProfesor.aspx.designer.cs">
+    <Compile Include="Profesores\TareasProfesor.aspx.designer.cs">
       <DependentUpon>TareasProfesor.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">

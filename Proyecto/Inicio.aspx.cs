@@ -6,6 +6,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using DataAccess;
+using System.Web.Security;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Proyecto
 {
@@ -13,8 +16,21 @@ namespace Proyecto
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            alert.Visible = false;
-            alert2.Visible = false;
+
+        }
+
+        private String getMD5Hash(string input)
+        {
+            MD5CryptoServiceProvider hash = new MD5CryptoServiceProvider();
+
+            //Aplico el hash a la pass introducida por el usuario
+            byte[] hashedPass = hash.ComputeHash(Encoding.Default.GetBytes(input));
+
+            //Convierto la cadena de bytes a string.
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int i = 0; i < hashedPass.Length; i++)
+                stringBuilder.Append(hashedPass[i].ToString("x2"));
+            return stringBuilder.ToString();
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -23,11 +39,55 @@ namespace Proyecto
             //APERTURA DE CONEXION CON LA BD.
             String resul = DataAccess.DataAccess.OpenConnection();
 
-            SqlDataReader dr = DataAccess.DataAccess.CheckUserLogin(emailL.Text, passL.Text);
+
+            String hashOfInput = getMD5Hash(passL.Text);
+
+            SqlDataReader dr = DataAccess.DataAccess.getUserData(emailL.Text);
+            StringComparer comparer = StringComparer.OrdinalIgnoreCase;
+
+            if (!dr.Read())
+            {//El email no esta registrado.
+                alert.Visible = false;
+                alert2.Visible = false;
+                errorEmailRegitrado.Visible = true;
+                return;
+            }
+           String userPass = dr.GetString(dr.GetOrdinal("pass"));
+            if(0 != comparer.Compare(hashOfInput, userPass))
+            {//La contraseña es incorrecta.
+
+                alert.Visible = true;
+                alert2.Visible = false;
+                errorEmailRegitrado.Visible = false;
+                //Cierro el DataReader
+                dr.Close();
+
+                //CIERRE DE CONEXION CON LA BD.
+                DataAccess.DataAccess.CloseConnection();
+                return;
+            }
+            //El usuario aun no ha confirmado el correo electronico.
+            else if (!dr.GetBoolean(dr.GetOrdinal("confirmado")))
+            {
+                alert.Visible = false;
+                alert2.Visible = true;
+                errorEmailRegitrado.Visible = false;
+
+                //Cierro el DataReader
+                dr.Close();
+
+                //CIERRE DE CONEXION CON LA BD.
+                DataAccess.DataAccess.CloseConnection();
+
+                return;
+            }
+
+
+            //   SqlDataReader dr = DataAccess.DataAccess.CheckUserLogin(emailL.Text, passL.Text);
 
 
             //Compruebo si la combinacion user+pass es corecta.
-            if (!dr.Read())
+        /*    if (!dr.Read())
             {
 
                 alert.Visible = true;
@@ -50,14 +110,24 @@ namespace Proyecto
                 DataAccess.DataAccess.CloseConnection();
 
                 return;
-            }
+            }*/
+
             if(dr.GetString(dr.GetOrdinal("tipo")) == "Profesor")
             {
                 Session["userType"] = "0";
+                if(emailL.Text == "vadillo@ehu.es")
+                {
+                    FormsAuthentication.SetAuthCookie("Vadillo", false);
+                }
+                else
+                {
+                    FormsAuthentication.SetAuthCookie("Profesor", false);
+                }
             }
             else
             {
                 Session["userType"] = "1";
+                FormsAuthentication.SetAuthCookie("Alumno", false);
             }
             //Cierro el DataReader
             dr.Close();

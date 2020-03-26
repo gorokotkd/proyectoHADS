@@ -70,6 +70,12 @@ namespace DataAccess
             String statement = "UPDATE Usuarios SET pass='" + pass + "' WHERE email='" + email + "'";
             return ExecuteNonQuery(statement);
         }
+
+        public static SqlDataReader getUserData(string email)
+        {
+            String statement = "SELECT * FROM Usuarios WHERE email='" + email + "'";
+            return ExecuteQuery(statement);
+        }
         public static Boolean checkStatus(String email, String numConf)
         {
             String sql = "SELECT * FROM Usuarios WHERE email='"+email+ "' AND numconfir=" + numConf;

@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using LibreriaClase;
 using DataAccess;
+using System.Text;
+using System.Security.Cryptography;
 
 namespace Proyecto
 {
@@ -38,10 +40,23 @@ namespace Proyecto
         {
             DataAccess.DataAccess.OpenConnection();
 
+            MD5CryptoServiceProvider hash = new MD5CryptoServiceProvider();
+
+            //Aplico el hash a la pass introducida por el usuario
+            byte[] hashedPass = hash.ComputeHash(Encoding.Default.GetBytes(passR.Text));
+
+            //Convierto la cadena de bytes a string.
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int i = 0; i < hashedPass.Length; i++)
+                stringBuilder.Append(hashedPass[i].ToString("x2"));
+
+
             DataAccess.DataAccess.InsertUser(emailR.Text, nombre.Text, apellido.Text,
-                numConrf, 0, userType.SelectedValue, passR.Text, 0);
+                numConrf, 0, userType.SelectedValue, stringBuilder.ToString(), 0);
 
             DataAccess.DataAccess.CloseConnection();
+
+            todoGuayAlert.Visible = true;
         }
 
     }

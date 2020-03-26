@@ -16,12 +16,17 @@
         <asp:Button ID="Button1" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="Button1_Click" />
     </div>
 
-    <div runat="server" class="alert alert-danger" role="alert" id="alert">
-        Usuario o contraseña incorrectos.
-    </div>
+    <div class="row">
+        <div runat="server" class="alert alert-danger" role="alert" id="alert" visible="false">
+            Usuario o contraseña incorrectos.
+        </div>
 
-    <div runat="server" class="alert alert-danger" role="alert" id="alert2">
-        Aun no se ha confirmado el correo electrónico.
-    </div>
+        <div runat="server" class="alert alert-danger" role="alert" id="alert2" visible="false">
+            Aun no se ha confirmado el correo electrónico.
+        </div>
 
+        <div runat="server" class="alert alert-danger" role="alert" id="errorEmailRegitrado" visible="false">
+            El email introducido no esta registrado. Puedes registrarte a traves de este <a href="Registro.aspx" class="alert-link">enlace.</a>
+        </div>
+    </div>
 </asp:Content>
