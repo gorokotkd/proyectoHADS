@@ -11,7 +11,7 @@ namespace Proyecto
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Redirect("Inicio.aspx");
+            Response.Redirect("Principal.aspx");
         }
     }
 }

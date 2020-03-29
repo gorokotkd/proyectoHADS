@@ -83,46 +83,24 @@ namespace Proyecto
             }
 
 
-            //   SqlDataReader dr = DataAccess.DataAccess.CheckUserLogin(emailL.Text, passL.Text);
-
-
-            //Compruebo si la combinacion user+pass es corecta.
-        /*    if (!dr.Read())
-            {
-
-                alert.Visible = true;
-                //Cierro el DataReader
-                dr.Close();
-
-                //CIERRE DE CONEXION CON LA BD.
-                DataAccess.DataAccess.CloseConnection();
-                return;
-            }
-            //El usuario aun no ha confirmado el correo electronico.
-            else if (!dr.GetBoolean(dr.GetOrdinal("confirmado")))
-            {
-                alert2.Visible = true;
-
-                //Cierro el DataReader
-                dr.Close();
-
-                //CIERRE DE CONEXION CON LA BD.
-                DataAccess.DataAccess.CloseConnection();
-
-                return;
-            }*/
-
             if(dr.GetString(dr.GetOrdinal("tipo")) == "Profesor")
             {
-                Session["userType"] = "0";
+                
                 if(emailL.Text == "vadillo@ehu.es")
                 {
                     FormsAuthentication.SetAuthCookie("Vadillo", false);
+                    Session["userType"] = "01";
                 }
                 else
                 {
                     FormsAuthentication.SetAuthCookie("Profesor", false);
+                    Session["userType"] = "0";
                 }
+            }
+            else if (dr.GetString(dr.GetOrdinal("tipo")) == "Admin")
+            {
+                FormsAuthentication.SetAuthCookie("Admin", false);
+                Session["userType"] = "11";
             }
             else
             {

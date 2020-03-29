@@ -41,7 +41,7 @@
         </asp:ScriptManager>
 
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="Inicio.aspx">Proyecto HADS</a>
+            <a class="navbar-brand" href="~/Principal.aspx">Proyecto HADS</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -49,62 +49,49 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="Principal.aspx">Inicio</a>
+                        <a class="nav-link" href="~/Principal.aspx">Inicio</a>
                     </li>
                     <li class="nav-item" id="logIn" runat="server">
-                        <a class="nav-link" href="Inicio.aspx">Log In</a>
+                        <a class="nav-link" href="~/Inicio.aspx">Log In</a>
                     </li>
                     <li class="nav-item" id="registro" runat="server">
-                        <a class="nav-link" href="Registro.aspx">Sign In</a>
+                        <a class="nav-link" href="~/Registro.aspx">Sign In</a>
                     </li>
                     <li class="nav-item" id="cambiarPass" runat="server">
-                        <a class="nav-link" href="CambiarPassword.aspx">Cambiar Contraseña</a>
+                        <a class="nav-link" href="~/CambiarPassword.aspx">Cambiar Contraseña</a>
                     </li>
                     <li class="nav-item" id="logOut" runat="server" visible="false">
-                        <a class="nav-link" href="Logout.aspx">Log Out</a>
+                        <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Logout.aspx">Log Out</asp:HyperLink>
                     </li>
                     <!-- Paginas para profesores registrados -->
                     <li class="nav-item" id="tareasProfesor" runat="server" visible="false">
-                        <a class="nav-link" href="TareasProfesor.aspx">Ver Tareas</a>
+                        <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Profesores/TareasProfesor.aspx">Ver Tareas</asp:HyperLink>
                     </li>
                     <li class="nav-item" id="mediasAlumnos" runat="server" visible="false">
-                        <a class="nav-link" href="IntervaloMedias.aspx">Ver Dedicación Media</a>
+                        <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Profesores/IntervaloMedias.aspx">Ver Dedicación Media</asp:HyperLink>
                     </li>
+                    
+                    <!-- Paginas para Vadillo -->
                     <li class="nav-item" id="importarXml" runat="server" visible="false">
-                        <a class="nav-link" href="ImportarXmlDoc.aspx">Importar Tareas (XMLDoc)</a>
+                        <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Profesores/Vadillo/ImportarXmlDoc.aspx">Importar Tareas (XMLDoc</asp:HyperLink>
                     </li>
                     <li class="nav-item" id="importarDataSet" runat="server" visible="false">
-                        <a class="nav-link" href="ImportarDataSet.aspx">Importar Tareas (DataSet)</a>
+                        <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Profesores/Vadillo/ImportarDataSet.aspx">Importar Tareas (DataSet)</asp:HyperLink>
                     </li>
                     <li class="nav-item" id="exportarTareas" runat="server" visible="false">
-                        <a class="nav-link" href="ExportarTareas.aspx">Exportar Tareas</a>
+                        <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Profesores/Vadillo/ExportarTareas.aspx">Exportar Tareas</asp:HyperLink>
                     </li>
                     <!-- Paginas para alumnos registrados -->
                     <li class="nav-item" id="tareasAlumno" runat="server" visible="false">
-                        <a class="nav-link" href="TareasAlumno.aspx">Ver Tareas</a>
+                        <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Alumnos/TareasAlumno.aspx">Ver Tareas</asp:HyperLink>
+                    </li>
+                    <!-- Paginas para el admin -->
+                    <li class="nav-item" id="gestionarUsuarios" runat="server" visible="false">
+                        <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Admin/GestionarUsuarios.aspx">Gestionar Usuarios</asp:HyperLink>
                     </li>
                 </ul>
                 </div>
             </nav>
-     <!--           <form class="form-inline my-2 my-lg-1">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <span id="login"><a class="nav-link" href="../php/LogIn.php">Log In</a></span>
-                        </li>
-                        <li class="nav-item">
-                            <span id="register" style="display: none"><a class="nav-link" href="../php/SignUp.php">Registrarse</a></span>
-                        </li>
-                        <li class="nav-item">
-                            <span id="user" style="display: none"><a class="nav-link" id="user2" href="#"></a></span>
-                        </li>
-                        <li class="nav-item">
-                            <span id="logout" style="display: none;"><a class="nav-link" href="../php/LogOut.php">Log Out</a></span>
-                        </li>
-
-                    </ul>
-                </form>
-            </div>
-        </nav>-->
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>

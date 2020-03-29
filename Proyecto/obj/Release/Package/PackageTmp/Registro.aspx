@@ -40,9 +40,12 @@
     <div class="form-group">
         <label for="userType">Tipo de usuario:</label>
         <asp:DropDownList ID="userType" runat="server" CssClass="form-control">
-            <asp:ListItem>Docente</asp:ListItem>
-            <asp:ListItem>Estudiante</asp:ListItem>
+            <asp:ListItem>Profesor</asp:ListItem>
+            <asp:ListItem>Alumno</asp:ListItem>
         </asp:DropDownList>
     </div>
     <asp:Button ID="submit" runat="server" Text="Sign In" CssClass="btn btn-primary" OnClick="submit_Click" />
+    <div class="alert alert-succsess" runat="server" visible="false" id="todoGuayAlert">
+        Registro realizado correctamente, compruebe su correo electronico y siga las instrucciones del mismo.
+    </div>
 </asp:Content>

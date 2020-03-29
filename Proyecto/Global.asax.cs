@@ -26,5 +26,13 @@ namespace Proyecto
             Session["userType"] = "-1"; //1 para alumnos, 0 para profesores
         }
 
+        void Application_End(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            FormsAuthentication.SignOut();
+        }
+
+
+
     }
 }

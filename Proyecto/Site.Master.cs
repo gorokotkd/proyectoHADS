@@ -21,13 +21,23 @@ namespace Proyecto
                 {
                     tareasAlumno.Visible = true;
                 }
-                else
+                else if(Session["userType"].ToString() == "01")    //El 01 es vadillo
                 {
                     tareasProfesor.Visible = true;
                     mediasAlumnos.Visible = true;
                     importarXml.Visible = true;
                     exportarTareas.Visible = true;
                     importarDataSet.Visible = true;
+                }
+                else if (Session["userType"].ToString() == "11") //El 11 es el admin
+                {
+                    gestionarUsuarios.Visible = true;
+                }
+                else
+                {
+                    tareasProfesor.Visible = true;
+                    mediasAlumnos.Visible = true;
+                    
                 }
                 logOut.Visible = true;
             }
@@ -38,6 +48,8 @@ namespace Proyecto
                 cambiarPass.Visible = true;
 
                 tareasAlumno.Visible = false;
+
+                gestionarUsuarios.Visible = false;
 
                 tareasProfesor.Visible = false;
                 mediasAlumnos.Visible = false;
