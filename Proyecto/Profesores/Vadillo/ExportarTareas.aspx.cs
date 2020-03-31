@@ -44,7 +44,7 @@ namespace Proyecto
         {
            if(asignaturas.SelectedValue != "-1")
             {
-                string path = "App_Data/" + asignaturas.SelectedValue + ".xml";
+                string path = "~/App_Data/" + asignaturas.SelectedValue + ".xml";
                 if (!File.Exists(Server.MapPath(path)))
                 {//El archivo no existe, creo el archivo.
                     try
@@ -112,7 +112,7 @@ namespace Proyecto
         {
             if (asignaturas.SelectedValue != "-1")
             {
-                string path = "App_Data/" + asignaturas.SelectedValue + ".json";
+                string path = "~/App_Data/" + asignaturas.SelectedValue + ".json";
 
                 DataSet ds = (DataSet)Session["tablaTareas"];
                 try {

@@ -29,10 +29,10 @@ namespace Proyecto
                 tareasYaImportadas.Visible = false;
                 errorImportar.Visible = false;
 
-                if (File.Exists(Server.MapPath("App_Data/" + asignaturas.SelectedValue + ".xml")))
+                if (File.Exists(Server.MapPath("~/App_Data/" + asignaturas.SelectedValue + ".xml")))
                 {
-                    Xml1.DocumentSource = Server.MapPath("App_Data/" + asignaturas.SelectedValue + ".xml");
-                    Xml1.TransformSource = Server.MapPath("App_Data/XSLTBy" + orderByStr + ".xslt");
+                    Xml1.DocumentSource = Server.MapPath("~/App_Data/" + asignaturas.SelectedValue + ".xml");
+                    Xml1.TransformSource = Server.MapPath("~/App_Data/XSLTBy" + orderByStr + ".xslt");
                 }
                 else
                 {
@@ -81,7 +81,7 @@ namespace Proyecto
                     adapter.Fill(table);
 
 
-                    xml.Load(Server.MapPath("App_Data/" + asignaturas.SelectedValue + ".xml"));
+                    xml.Load(Server.MapPath("~/App_Data/" + asignaturas.SelectedValue + ".xml"));
                     /*TAREAS GENERICAS 
                      * Codigo       : String
                      * Descripcion  : String

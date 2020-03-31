@@ -26,10 +26,10 @@ namespace Proyecto
                 errorArchivo.Visible = false;
                 todoGuayAlert.Visible = false;
                 tareasYaImportadas.Visible = false;
-                if (File.Exists(Server.MapPath("App_Data/" + asignaturas.SelectedValue + ".xml")))
+                if (File.Exists(Server.MapPath("~/App_Data/" + asignaturas.SelectedValue + ".xml")))
                 {
-                    Xml1.DocumentSource = Server.MapPath("App_Data/" + asignaturas.SelectedValue + ".xml");
-                    Xml1.TransformSource = Server.MapPath("App_Data/XSLTFile.xsl");
+                    Xml1.DocumentSource = Server.MapPath("~/App_Data/" + asignaturas.SelectedValue + ".xml");
+                    Xml1.TransformSource = Server.MapPath("~/App_Data/XSLTFile.xsl");
                 }
                 else
                 {
@@ -49,7 +49,7 @@ namespace Proyecto
 
         protected void importar_Click(object sender, EventArgs e)
         {
-            if (File.Exists(Server.MapPath("App_Data/" + asignaturas.SelectedValue + ".xml")))
+            if (File.Exists(Server.MapPath("~/App_Data/" + asignaturas.SelectedValue + ".xml")))
             {//Existe el fichero seleccionado
                 DataSet ds = new DataSet();
                 DataSet xmlDs = new DataSet();
@@ -65,7 +65,7 @@ namespace Proyecto
                 adapter.InsertCommand.Parameters.Add("@tipoTarea", SqlDbType.NVarChar, 50, "TipoTarea");
                 adapter.Fill(ds, "Tareas");
 
-                xmlDs.ReadXml(Server.MapPath(("App_Data/" + asignaturas.SelectedValue + ".xml")));
+                xmlDs.ReadXml(Server.MapPath(("~/App_Data/" + asignaturas.SelectedValue + ".xml")));
 
                 for (int i = 0; i < xmlDs.Tables["tarea"].Rows.Count; i++)
                 {//Compruebo si existen los registros que quiero insertar

@@ -41,7 +41,7 @@
         </asp:ScriptManager>
 
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="~/Principal.aspx">Proyecto HADS</a>
+            <a class="navbar-brand" href="Principal.aspx">Proyecto HADS</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -49,16 +49,16 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="~/Principal.aspx">Inicio</a>
+                        <a class="nav-link" href="Principal.aspx">Inicio</a>
                     </li>
                     <li class="nav-item" id="logIn" runat="server">
-                        <a class="nav-link" href="~/Inicio.aspx">Log In</a>
+                        <a class="nav-link" href="Inicio.aspx">Log In</a>
                     </li>
                     <li class="nav-item" id="registro" runat="server">
-                        <a class="nav-link" href="~/Registro.aspx">Sign In</a>
+                        <a class="nav-link" href="Registro.aspx">Sign In</a>
                     </li>
                     <li class="nav-item" id="cambiarPass" runat="server">
-                        <a class="nav-link" href="~/CambiarPassword.aspx">Cambiar Contraseña</a>
+                        <a class="nav-link" href="CambiarPassword.aspx">Cambiar Contraseña</a>
                     </li>
                     <li class="nav-item" id="logOut" runat="server" visible="false">
                         <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Logout.aspx">Log Out</asp:HyperLink>
