@@ -15,9 +15,6 @@ namespace Proyecto
         {
             ArrayList alumnos = ((ArrayList)Application["AlumnoEmailList"]);
             ArrayList profesores = ((ArrayList)Application["ProfesorEmailList"]);
-            //  alumnosTextBox.Text &= alumnos.ToArray()[alumnos.Count - 1].ToString();
-            //    profesoresTextBox.Text = profesores.ToString();
-
 
             /*   for (int i = 0; i < profesores.Count; i++)
                    profesoresList.Items.Add(profesores.ToArray()[i].ToString());

@@ -41,7 +41,7 @@
         </asp:ScriptManager>
 
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="Principal.aspx">Proyecto HADS</a>
+            <asp:HyperLink runat="server" CssClass="navbar-brand" NavigateUrl="~/Principal">Proyecto HADS</asp:HyperLink>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -49,16 +49,16 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="Principal.aspx">Inicio</a>
+                        <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Principal.aspx">Inicio</asp:HyperLink>
                     </li>
                     <li class="nav-item" id="logIn" runat="server">
-                        <a class="nav-link" href="Inicio.aspx">Log In</a>
+                        <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Inicio.aspx">Log In</asp:HyperLink>
                     </li>
                     <li class="nav-item" id="registro" runat="server">
-                        <a class="nav-link" href="Registro.aspx">Sign In</a>
+                        <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Registro.aspx">Sign In</asp:HyperLink>
                     </li>
                     <li class="nav-item" id="cambiarPass" runat="server">
-                        <a class="nav-link" href="CambiarPassword.aspx">Cambiar Contraseña</a>
+                        <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/CambiarPassword.aspx">Cambiar Contraseña</asp:HyperLink>
                     </li>
                     <li class="nav-item" id="logOut" runat="server" visible="false">
                         <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Logout.aspx">Log Out</asp:HyperLink>

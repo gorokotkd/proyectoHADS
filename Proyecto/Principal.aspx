@@ -4,8 +4,8 @@
 
      <footer>
         <!--     <div class="list-group">
-            <asp:ListBox ID="profesoresList" runat="server" Height="200" Width="200" CssClass="list-group"></asp:ListBox>
-            <asp:ListBox ID="alumnosList" runat="server" Height="200" Width="200" CssClass="list-group"></asp:ListBox>
+            <asp:ListBox ID="profesoresList" runat="server" Height="200" Width="200"></asp:ListBox>
+            <asp:ListBox ID="alumnosList" runat="server" Height="200" Width="200"></asp:ListBox>
         </div-->
         <asp:Timer ID="Timer1" runat="server" Interval="8000" OnTick="Timer1_Tick"></asp:Timer>
         <asp:UpdatePanel ID="UpdatePanel2" runat="server">
