@@ -9,6 +9,7 @@ using DataAccess;
 using System.Web.Security;
 using System.Security.Cryptography;
 using System.Text;
+using System.Collections;
 
 namespace Proyecto
 {
@@ -50,6 +51,11 @@ namespace Proyecto
                 alert.Visible = false;
                 alert2.Visible = false;
                 errorEmailRegitrado.Visible = true;
+                //Cierro el DataReader
+                dr.Close();
+
+                //CIERRE DE CONEXION CON LA BD.
+                DataAccess.DataAccess.CloseConnection();
                 return;
             }
            String userPass = dr.GetString(dr.GetOrdinal("pass"));
@@ -96,6 +102,8 @@ namespace Proyecto
                     FormsAuthentication.SetAuthCookie("Profesor", false);
                     Session["userType"] = "0";
                 }
+
+                ((ArrayList)Application["ProfesorEmailList"]).Add(emailL.Text);
             }
             else if (dr.GetString(dr.GetOrdinal("tipo")) == "Admin")
             {
@@ -106,6 +114,7 @@ namespace Proyecto
             {
                 Session["userType"] = "1";
                 FormsAuthentication.SetAuthCookie("Alumno", false);
+                ((ArrayList)Application["AlumnoEmailList"]).Add(emailL.Text);
             }
             //Cierro el DataReader
             dr.Close();
@@ -115,6 +124,7 @@ namespace Proyecto
 
             Session["email"] = emailL.Text;
             Session["identificado"] = "SI";
+            
             Response.Redirect("Principal.aspx");
 
         }

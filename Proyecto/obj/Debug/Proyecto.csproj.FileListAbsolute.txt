@@ -242,3 +242,4 @@ J:\Datos\HADS\proyectoHADS\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.
 J:\Datos\HADS\proyectoHADS\Proyecto\obj\Debug\Proyecto.csproj.CopyComplete
 J:\Datos\HADS\proyectoHADS\Proyecto\obj\Debug\Proyecto.dll
 J:\Datos\HADS\proyectoHADS\Proyecto\obj\Debug\Proyecto.pdb
+J:\Datos\HADS\proyectoHADS\Proyecto\bin\AjaxControlToolkit.dll
