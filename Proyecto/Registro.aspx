@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="Proyecto.Registro" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="form-group">
         <label for="emailR">Email</label>
@@ -44,6 +46,8 @@
             <asp:ListItem>Alumno</asp:ListItem>
         </asp:DropDownList>
     </div>
+
+
     <asp:Button ID="submit" runat="server" Text="Sign In" CssClass="btn btn-primary" OnClick="submit_Click" />
     <div class="alert alert-succsess" runat="server" visible="false" id="todoGuayAlert">
         Registro realizado correctamente, compruebe su correo electronico y siga las instrucciones del mismo.

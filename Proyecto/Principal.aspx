@@ -1,8 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Principal.aspx.cs" Inherits="Proyecto.Principal" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/Optimizar-tareas-1024x682.jpg" />
 
-     <footer>
+<%@ Register TagPrefix="ajaxToolkit" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/Optimizar-tareas-1024x682.jpg" />
+
+    <footer>
         <!--     <div class="list-group">
             <asp:ListBox ID="profesoresList" runat="server" Height="200" Width="200"></asp:ListBox>
             <asp:ListBox ID="alumnosList" runat="server" Height="200" Width="200"></asp:ListBox>

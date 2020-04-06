@@ -11,6 +11,7 @@ namespace Proyecto
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (Session["identificado"].ToString() == "SI")
             {//el usuario ha iniciado sesion correctamente
                 logIn.Visible = false;

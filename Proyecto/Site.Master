@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Proyecto.SiteMaster" %>
 
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
+
 <!DOCTYPE html>
 
 <html lang="es">
@@ -70,7 +72,7 @@
                     <li class="nav-item" id="mediasAlumnos" runat="server" visible="false">
                         <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Profesores/IntervaloMedias.aspx">Ver Dedicación Media</asp:HyperLink>
                     </li>
-                    
+
                     <!-- Paginas para Vadillo -->
                     <li class="nav-item" id="importarXml" runat="server" visible="false">
                         <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Profesores/Vadillo/ImportarXmlDoc.aspx">Importar Tareas (XMLDoc</asp:HyperLink>
@@ -90,8 +92,9 @@
                         <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Admin/GestionarUsuarios.aspx">Gestionar Usuarios</asp:HyperLink>
                     </li>
                 </ul>
-                </div>
-            </nav>
+            </div>
+        </nav>
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>

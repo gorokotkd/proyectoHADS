@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TareasProfesor.aspx.cs" Inherits="Proyecto.TareasProfesor" %>
 
+
+<%@ Register TagPrefix="ajaxToolkit" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
     <div class="container">
         <div class="row">
             <div class="container">
@@ -69,6 +72,7 @@
 
                         <SortedDescendingHeaderStyle BackColor="#4870BE"></SortedDescendingHeaderStyle>
                     </asp:GridView>
+                    <ajaxToolkit:DragPanelExtender runat="server" DragHandleID="GridView1" BehaviorID="GridView1_DragPanelExtender" TargetControlID="GridView1" ID="GridView1_DragPanelExtender"></ajaxToolkit:DragPanelExtender>
                     <asp:SqlDataSource runat="server" ID="SqlDataSource2" ConnectionString='<%$ ConnectionStrings:AmigosConnectionString %>' DeleteCommand="DELETE FROM [TareasGenericas] WHERE [Codigo] = @Codigo" InsertCommand="INSERT INTO [TareasGenericas] ([Codigo], [Descripcion], [CodAsig], [HEstimadas], [Explotacion], [TipoTarea]) VALUES (@Codigo, @Descripcion, @CodAsig, @HEstimadas, @Explotacion, @TipoTarea)" SelectCommand="SELECT * FROM [TareasGenericas] WHERE ([CodAsig] = @CodAsig)" UpdateCommand="UPDATE [TareasGenericas] SET [Descripcion] = @Descripcion, [CodAsig] = @CodAsig, [HEstimadas] = @HEstimadas, [Explotacion] = @Explotacion, [TipoTarea] = @TipoTarea WHERE [Codigo] = @Codigo">
                         <DeleteParameters>
                             <asp:Parameter Name="Codigo" Type="String"></asp:Parameter>
