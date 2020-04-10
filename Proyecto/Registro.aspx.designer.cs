@@ -24,6 +24,33 @@ namespace Proyecto
         protected global::System.Web.UI.WebControls.TextBox emailR;
 
         /// <summary>
+        /// Control alertEmail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alertEmail;
+
+        /// <summary>
+        /// Control emailValido.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl emailValido;
+
+        /// <summary>
+        /// Control alertEmailRepeat.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alertEmailRepeat;
+
+        /// <summary>
         /// Control passR.
         /// </summary>
         /// <remarks>
@@ -40,6 +67,15 @@ namespace Proyecto
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox passR2;
+
+        /// <summary>
+        /// Control alertPass.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alertPass;
 
         /// <summary>
         /// Control nombre.
@@ -69,6 +105,15 @@ namespace Proyecto
         protected global::System.Web.UI.WebControls.DropDownList userType;
 
         /// <summary>
+        /// Control alertUserType.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alertUserType;
+
+        /// <summary>
         /// Control submit.
         /// </summary>
         /// <remarks>
@@ -85,5 +130,14 @@ namespace Proyecto
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl todoGuayAlert;
+
+        /// <summary>
+        /// Control emailNoVip.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl emailNoVip;
     }
 }

@@ -20,6 +20,9 @@ namespace Proyecto
 
         protected void submit_Click(object sender, EventArgs e)
         {
+            if (!comprobarDatos())
+                return;
+          
             LibreriaClase.EnviarCorreo correoSender = new EnviarCorreo();
 
             var random = new Random();
@@ -34,6 +37,49 @@ namespace Proyecto
             //   ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Correo enviado')", true);
 
             guardarRegistroEnBd(NumConf);
+    }
+
+        /**
+         * comprueba los datos introducidos. En caso de que haya algo incorrecto, muestra mensaje de error y devuelve false.
+         */
+        private Boolean comprobarDatos()
+        {
+            DataAccess.DataAccess.OpenConnection();
+
+            emailNoVip.Visible = false;
+            alertPass.Visible = false;
+            alertUserType.Visible = false;
+            alertEmailRepeat.Visible = false;
+            Boolean vip = Boolean.Parse(Session["emailRValido"].ToString());
+            if (!vip)
+            {//el email no es vip
+                emailNoVip.Visible = true;
+                DataAccess.DataAccess.CloseConnection();
+                return false;
+            }
+            else if (!passR.Text.Equals(passR2.Text))
+            {//las contraseñas no coinciden
+                alertPass.Visible = true;
+                DataAccess.DataAccess.CloseConnection();
+                return false;
+            }
+            else if (userType.SelectedValue != "Alumno" && userType.SelectedValue != "Profesor")
+            {//el tipo de usuario seleccionado no es valido o no se ha seleccionado ninguno.
+                alertUserType.Visible = true;
+                DataAccess.DataAccess.CloseConnection();
+                return false;
+            }
+            else if (DataAccess.DataAccess.checkEmail(emailR.Text))
+            {//El email ya esta registrado
+                alertEmailRepeat.Visible = true;
+                DataAccess.DataAccess.CloseConnection();
+                return false;
+            }
+            else
+            {
+                DataAccess.DataAccess.CloseConnection();
+                return true;
+            }
         }
 
         private void guardarRegistroEnBd(int numConrf)
@@ -59,5 +105,22 @@ namespace Proyecto
             todoGuayAlert.Visible = true;
         }
 
+        protected void emailR_TextChanged(object sender, EventArgs e)
+        {
+            matricula.Matriculas matr = new matricula.Matriculas();
+            String resul = matr.comprobar(emailR.Text);
+            if (resul.Equals("SI"))
+            {//el email es VIP
+                Session["emailRValido"] = true;
+                alertEmail.Visible = false;
+                emailValido.Visible = true;
+            }
+            else
+            {//El email no es VIP.
+                Session["emailRValido"] = false;
+                alertEmail.Visible = true;
+                emailValido.Visible = false;
+            }
+        }
     }
 }

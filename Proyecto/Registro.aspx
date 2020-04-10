@@ -3,17 +3,24 @@
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="form-group">
-        <label for="emailR">Email</label>
+    <asp:UpdatePanel runat="server">
+        <ContentTemplate>
+            <div class="form-group">
+                <label for="emailR">Email</label>
 
-        <asp:TextBox runat="server" ID="emailR" TextMode="Email" CssClass="form-control"></asp:TextBox>
-        <small id="emaildHelpBlock" class="form-text text-muted">El email debe tener el formato de la UPV/EHU, ya sea de alumnos o profesores. Ej: galvarez024@ikasle.ehu.eus o gorka@ehu.eus
-        </small>
-    </div>
-    <div class="alert alert-danger" style="display: none" role="alert" id="alert-email">
-        El email no es del formato de la UPV/EHU!
-    </div>
-    <div class="alert alert-danger" style="display: none" role="alert" id="alert-email-repeat">
+                <asp:TextBox runat="server" ID="emailR" TextMode="Email" CssClass="form-control" OnTextChanged="emailR_TextChanged" AutoPostBack="True"></asp:TextBox>
+                <small id="emaildHelpBlock" class="form-text text-muted">El email debe tener el formato de la UPV/EHU, ya sea de alumnos o profesores. Ej: galvarez024@ikasle.ehu.eus o gorka@ehu.eus
+                </small>
+            </div>
+            <div class="alert alert-danger" role="alert" id="alertEmail" runat="server" visible="false">
+                El email introducido no es VIP
+            </div>
+            <div class="alert alert-success" id="emailValido" runat="server" visible="false">
+                Email VIP :D
+            </div>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+    <div class="alert alert-danger" runat="server" visible="false" id="alertEmailRepeat">
         Este email ya esta registrado!
     </div>
     <div class="form-row">
@@ -26,7 +33,7 @@
             <asp:TextBox ID="passR2" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
         </div>
     </div>
-    <div class="alert alert-danger" style="display: none" role="alert" id="alert-pass">
+    <div class="alert alert-danger" runat="server" visible="false" id="alertPass">
         Las contraseñas no coinciden!
     </div>
     <div class="form-row">
@@ -42,14 +49,20 @@
     <div class="form-group">
         <label for="userType">Tipo de usuario:</label>
         <asp:DropDownList ID="userType" runat="server" CssClass="form-control">
-            <asp:ListItem>Profesor</asp:ListItem>
-            <asp:ListItem>Alumno</asp:ListItem>
+            <asp:ListItem Value="-1">-- Selecciona un tipo de usuario. --</asp:ListItem>
+            <asp:ListItem Value="Profesor">Profesor</asp:ListItem>
+            <asp:ListItem Value="Alumno">Alumno</asp:ListItem>
         </asp:DropDownList>
     </div>
+    <div class="alert alert-danger" runat="server" visible="false" id="alertUserType">
+        Selecciona un tipo de usuario válido.
+    </div>
 
-
-    <asp:Button ID="submit" runat="server" Text="Sign In" CssClass="btn btn-primary" OnClick="submit_Click" />
+    <asp:Button ID="submit" runat="server" Text="Sign In" CssClass="btn btn-primary" OnClick="submit_Click" /><br />
     <div class="alert alert-succsess" runat="server" visible="false" id="todoGuayAlert">
-        Registro realizado correctamente, compruebe su correo electronico y siga las instrucciones del mismo.
+        Registro realizado correctamente, compruebe su correo electrónico y siga las instrucciones del mismo.
+    </div>
+    <div class="alert alert-danger" role="alert" id="emailNoVip" runat="server" visible="false">
+        Introduce un email que sea VIP.
     </div>
 </asp:Content>
