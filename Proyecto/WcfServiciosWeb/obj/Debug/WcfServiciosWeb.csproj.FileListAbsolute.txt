@@ -1,0 +1,10 @@
+J:\Datos\HADS\proyectoHADS\Proyecto\WcfServiciosWeb\bin\WcfServiciosWeb.dll.config
+J:\Datos\HADS\proyectoHADS\Proyecto\WcfServiciosWeb\bin\WcfServiciosWeb.dll
+J:\Datos\HADS\proyectoHADS\Proyecto\WcfServiciosWeb\bin\WcfServiciosWeb.pdb
+J:\Datos\HADS\proyectoHADS\Proyecto\WcfServiciosWeb\bin\DataAccess.dll
+J:\Datos\HADS\proyectoHADS\Proyecto\WcfServiciosWeb\bin\DataAccess.pdb
+J:\Datos\HADS\proyectoHADS\Proyecto\WcfServiciosWeb\obj\Debug\WcfServiciosWeb.csprojAssemblyReference.cache
+J:\Datos\HADS\proyectoHADS\Proyecto\WcfServiciosWeb\obj\Debug\WcfServiciosWeb.csproj.CoreCompileInputs.cache
+J:\Datos\HADS\proyectoHADS\Proyecto\WcfServiciosWeb\obj\Debug\WcfServiciosWeb.csproj.CopyComplete
+J:\Datos\HADS\proyectoHADS\Proyecto\WcfServiciosWeb\obj\Debug\WcfServiciosWeb.dll
+J:\Datos\HADS\proyectoHADS\Proyecto\WcfServiciosWeb\obj\Debug\WcfServiciosWeb.pdb

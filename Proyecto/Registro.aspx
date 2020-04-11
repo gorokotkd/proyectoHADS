@@ -23,19 +23,43 @@
     <div class="alert alert-danger" runat="server" visible="false" id="alertEmailRepeat">
         Este email ya esta registrado!
     </div>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="passR">Contraseña</label>
-            <asp:TextBox ID="passR" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
-        </div>
-        <div class="form-group col-md-6">
-            <label for="passR2">Repetir Contraseña</label>
-            <asp:TextBox ID="passR2" TextMode="Password" CssClass="form-control" runat="server"></asp:TextBox>
-        </div>
-    </div>
-    <div class="alert alert-danger" runat="server" visible="false" id="alertPass">
-        Las contraseñas no coinciden!
-    </div>
+
+    <asp:UpdatePanel runat="server">
+        <ContentTemplate>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="passR">Contraseña</label>
+                    <asp:TextBox ID="passR" TextMode="Password" CssClass="form-control" runat="server" OnTextChanged="passR_TextChanged" AutoPostBack="true"/>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="passR2">Repetir Contraseña</label>
+                    <asp:TextBox ID="passR2" TextMode="Password" CssClass="form-control" runat="server" OnTextChanged="passR2_TextChanged" AutoPostBack="true"/>
+                </div>
+            </div>
+            <div class="alert alert-danger" runat="server" visible="false" id="alertPass">
+                Las contraseñas no coinciden!
+            </div>
+            <div class="alert alert-danger" runat="server" visible="false" id="passBlank">
+                La contraseña no puede ser vacia.
+            </div>
+            <div class="alert alert-danger" runat="server" visible="false" id="passVeryWeak">
+                Las contraseña es muy debil.
+            </div>
+            <div class="alert alert-danger" runat="server" visible="false" id="passWeak">
+                La contraseña es debil.
+            </div>
+            <div class="alert alert-warning" runat="server" visible="false" id="passMedium">
+                La fuerza de la contraseña es media.
+            </div>
+            <div class="alert alert-success" runat="server" visible="false" id="passStrong">
+                La contraseña es fuerte.
+            </div>
+            <div class="alert alert-danger" runat="server" visible="false" id="passVeryStrong">
+                La contraseña es <strong>muy fuerte</strong>.
+            </div>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+
     <div class="form-row">
         <div class="form-group col-md-6">
             <label for="nombre">Nombre</label>

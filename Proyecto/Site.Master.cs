@@ -29,6 +29,7 @@ namespace Proyecto
                     importarXml.Visible = true;
                     exportarTareas.Visible = true;
                     importarDataSet.Visible = true;
+                    dedicacionMedia.Visible = true;
                 }
                 else if (Session["userType"].ToString() == "11") //El 11 es el admin
                 {
@@ -57,6 +58,7 @@ namespace Proyecto
                 importarXml.Visible = false;
                 exportarTareas.Visible = false;
                 importarDataSet.Visible = false;
+                dedicacionMedia.Visible = false;
 
                 logOut.Visible = false;
 

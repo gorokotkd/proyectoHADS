@@ -83,6 +83,9 @@
                     <li class="nav-item" id="exportarTareas" runat="server" visible="false">
                         <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Profesores/Vadillo/ExportarTareas.aspx">Exportar Tareas</asp:HyperLink>
                     </li>
+                    <li class="nav-item" id="dedicacionMedia" runat="server" visible="false">
+                        <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Profesores/Vadillo/Coordinador.aspx">Dedicacion Media (Coordinador)</asp:HyperLink>
+                    </li>
                     <!-- Paginas para alumnos registrados -->
                     <li class="nav-item" id="tareasAlumno" runat="server" visible="false">
                         <asp:HyperLink runat="server" CssClass="nav-link" NavigateUrl="~/Alumnos/TareasAlumno.aspx">Ver Tareas</asp:HyperLink>

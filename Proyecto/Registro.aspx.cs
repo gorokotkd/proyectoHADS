@@ -57,12 +57,12 @@ namespace Proyecto
                 DataAccess.DataAccess.CloseConnection();
                 return false;
             }
-            else if (!passR.Text.Equals(passR2.Text))
+        /*    else if (!passR.Text.Equals(passR2.Text))
             {//las contraseñas no coinciden
                 alertPass.Visible = true;
                 DataAccess.DataAccess.CloseConnection();
                 return false;
-            }
+            }*/
             else if (userType.SelectedValue != "Alumno" && userType.SelectedValue != "Profesor")
             {//el tipo de usuario seleccionado no es valido o no se ha seleccionado ninguno.
                 alertUserType.Visible = true;
@@ -120,6 +120,82 @@ namespace Proyecto
                 Session["emailRValido"] = false;
                 alertEmail.Visible = true;
                 emailValido.Visible = false;
+            }
+        }
+
+        protected void passR2_TextChanged(object sender, EventArgs e)
+        {
+            if (!passR.Text.Equals(passR2.Text))
+            {//las contraseñas no coinciden
+                alertPass.Visible = true;
+            }
+            else
+            {
+                alertPass.Visible = false;
+            }
+           
+        }
+
+        protected void passR_TextChanged(object sender, EventArgs e)
+        {
+            int passStrength = new passwordTester.PasswordTesterClient().checkPassword(passR.Text);
+
+            mostrarPassAlert(passStrength);
+        }
+
+        private void mostrarPassAlert(int num)
+        {
+            switch (num)
+            {
+                case 0:
+                    passBlank.Visible = true;
+                    passVeryWeak.Visible = false;
+                    passWeak.Visible = false;
+                    passMedium.Visible = false;
+                    passStrong.Visible = false;
+                    passVeryStrong.Visible = false;
+                    break;
+                case 1:
+                    passBlank.Visible = false;
+                    passVeryWeak.Visible = true;
+                    passWeak.Visible = false;
+                    passMedium.Visible = false;
+                    passStrong.Visible = false;
+                    passVeryStrong.Visible = false;
+                    break;
+                case 2:
+                    passBlank.Visible = false;
+                    passVeryWeak.Visible = false;
+                    passWeak.Visible = true;
+                    passMedium.Visible = false;
+                    passStrong.Visible = false;
+                    passVeryStrong.Visible = false;
+                    break;
+                case 3:
+                    passBlank.Visible = false;
+                    passVeryWeak.Visible = false;
+                    passWeak.Visible = false;
+                    passMedium.Visible = true;
+                    passStrong.Visible = false;
+                    passVeryStrong.Visible = false;
+                    break;
+                case 4:
+                    passBlank.Visible = false;
+                    passVeryWeak.Visible = false;
+                    passWeak.Visible = false;
+                    passMedium.Visible = false;
+                    passStrong.Visible = true;
+                    passVeryStrong.Visible = false;
+                    break;
+                case 5:
+                    passBlank.Visible = false;
+                    passVeryWeak.Visible = false;
+                    passWeak.Visible = false;
+                    passMedium.Visible = false;
+                    passStrong.Visible = false;
+                    passVeryStrong.Visible = true;
+                    break;
+
             }
         }
     }
