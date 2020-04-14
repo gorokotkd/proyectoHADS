@@ -17,16 +17,18 @@ namespace Proyecto
             // Código que se ejecuta al iniciar la aplicación
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            Application["AlumnoEmailList"] = new ArrayList();
-            Application["ProfesorEmailList"] = new ArrayList();
+            Application["AlumnoEmailList"] = new ArrayList();   //Lista de alumnos que estan conectados
+            Application["ProfesorEmailList"] = new ArrayList(); //Lista de profesores que estan conectados.
         }
 
         protected void Session_Start(object sender, EventArgs e)
         {
+            Session["emailRValido"] = false; //utilizado para ver si el email es VIP en el registro.
             Session["validEmail"] = "NO";
             Session["numConf"] = 0;
             Session["identificado"] = "NO";
-            Session["userType"] = "-1"; //1 para alumnos, 0 para profesores, 01 Vadillo, 10 Admin
+            Session["userType"] = "-1"; //1 para alumnos, 0 para profesores, 01 Vadillo, 10 Admin.
+            Session["validPass"] = false;
         }
 
 
