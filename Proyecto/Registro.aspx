@@ -89,6 +89,7 @@
     <div class="alert alert-danger" role="alert" id="emailNoVip" runat="server" visible="false">
         Introduce un email que sea VIP.
     </div>
+    <br />
     <div class="alert alert-danger" role="alert" id="noValidPass" runat="server" visible="false">
         La contraseña introducida no tiene la fuerza suficiente.
     </div>
