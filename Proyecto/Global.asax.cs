@@ -28,6 +28,7 @@ namespace Proyecto
             Session["numConf"] = 0;
             Session["identificado"] = "NO";
             Session["userType"] = "-1"; //1 para alumnos, 0 para profesores, 01 Vadillo, 10 Admin.
+            Session["validPass"] = false;
         }
 
 

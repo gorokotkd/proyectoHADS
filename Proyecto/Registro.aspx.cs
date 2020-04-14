@@ -61,10 +61,18 @@ namespace Proyecto
             alertPass.Visible = false;
             alertUserType.Visible = false;
             alertEmailRepeat.Visible = false;
+            noValidPass.Visible = false;
             Boolean vip = Boolean.Parse(Session["emailRValido"].ToString());
+            Boolean validPass = Boolean.Parse(Session["validPAss"].ToString());
             if (!vip)
             {//el email no es vip
                 emailNoVip.Visible = true;
+                DataAccess.DataAccess.CloseConnection();
+                return false;
+            }
+            else if (!validPass)
+            {
+                noValidPass.Visible = true;
                 DataAccess.DataAccess.CloseConnection();
                 return false;
             }
@@ -168,6 +176,7 @@ namespace Proyecto
                     passMedium.Visible = false;
                     passStrong.Visible = false;
                     passVeryStrong.Visible = false;
+                    Session["validPass"] = false;
                     break;
                 case 1:
                     passBlank.Visible = false;
@@ -176,6 +185,7 @@ namespace Proyecto
                     passMedium.Visible = false;
                     passStrong.Visible = false;
                     passVeryStrong.Visible = false;
+                    Session["validPass"] = false;
                     break;
                 case 2:
                     passBlank.Visible = false;
@@ -184,6 +194,7 @@ namespace Proyecto
                     passMedium.Visible = false;
                     passStrong.Visible = false;
                     passVeryStrong.Visible = false;
+                    Session["validPass"] = false;
                     break;
                 case 3:
                     passBlank.Visible = false;
@@ -192,6 +203,7 @@ namespace Proyecto
                     passMedium.Visible = true;
                     passStrong.Visible = false;
                     passVeryStrong.Visible = false;
+                    Session["validPass"] = true;
                     break;
                 case 4:
                     passBlank.Visible = false;
@@ -200,6 +212,7 @@ namespace Proyecto
                     passMedium.Visible = false;
                     passStrong.Visible = true;
                     passVeryStrong.Visible = false;
+                    Session["validPass"] = true;
                     break;
                 case 5:
                     passBlank.Visible = false;
@@ -208,6 +221,7 @@ namespace Proyecto
                     passMedium.Visible = false;
                     passStrong.Visible = false;
                     passVeryStrong.Visible = true;
+                    Session["validPass"] = true;
                     break;
 
             }
