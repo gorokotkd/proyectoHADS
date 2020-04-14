@@ -8,7 +8,7 @@
             <div class="form-group">
                 <label for="emailR">Email</label>
 
-                <asp:TextBox runat="server" ID="emailR" TextMode="Email" CssClass="form-control" OnTextChanged="emailR_TextChanged" AutoPostBack="True"></asp:TextBox>
+                <asp:TextBox runat="server" ID="emailR" TextMode="Email" CssClass="form-control" OnTextChanged="emailR_TextChanged" AutoPostBack="True"/>
                 <small id="emaildHelpBlock" class="form-text text-muted">El email debe tener el formato de la UPV/EHU, ya sea de alumnos o profesores. Ej: galvarez024@ikasle.ehu.eus o gorka@ehu.eus
                 </small>
             </div>
@@ -54,7 +54,7 @@
             <div class="alert alert-success" runat="server" visible="false" id="passStrong">
                 La contraseña es fuerte.
             </div>
-            <div class="alert alert-danger" runat="server" visible="false" id="passVeryStrong">
+            <div class="alert alert-success" runat="server" visible="false" id="passVeryStrong">
                 La contraseña es <strong>muy fuerte</strong>.
             </div>
         </ContentTemplate>

@@ -15,7 +15,18 @@ namespace Proyecto
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+            {
+                if (!(String.IsNullOrEmpty(passR.Text.Trim())))
+                {
+                    passR.Attributes["value"] = passR.Text;
+                }
 
+                if (!(String.IsNullOrEmpty(passR2.Text.Trim())))
+                {
+                    passR2.Attributes["value"] = passR2.Text;
+                }
+            }
         }
 
         protected void submit_Click(object sender, EventArgs e)
@@ -125,7 +136,9 @@ namespace Proyecto
 
         protected void passR2_TextChanged(object sender, EventArgs e)
         {
-            if (!passR.Text.Equals(passR2.Text))
+            String pass1 = passR.Text;
+            String pass2 = passR2.Text;
+            if (!pass1.Equals(pass2))
             {//las contraseñas no coinciden
                 alertPass.Visible = true;
             }
@@ -138,7 +151,8 @@ namespace Proyecto
 
         protected void passR_TextChanged(object sender, EventArgs e)
         {
-            int passStrength = new passwordTester.PasswordTesterClient().checkPassword(passR.Text);
+            String pass = passR.Text;
+            int passStrength = new passwordTester.PasswordTesterClient().checkPassword(pass);
 
             mostrarPassAlert(passStrength);
         }

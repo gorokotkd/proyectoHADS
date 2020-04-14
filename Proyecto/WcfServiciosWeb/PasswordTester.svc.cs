@@ -12,30 +12,60 @@ namespace WcfServiciosWeb
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione PasswordTester.svc o PasswordTester.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class PasswordTester : IPasswordTester
     {
-
         public int checkPassword(string password)
         {
             int score = 0;
-
-            if (password.Length < 1) 
-                return 0;                   //Blank Pass
-            if (password.Length < 4)
-                return 1;                   //VeryWeak Pass
-
-            if (password.Length >= 8)
-                score++;                    //VeryWeak Pass
-            if (password.Length >= 12)
-                score++;                    //Weak Pass
-            if (Regex.IsMatch(password, @"/\d+/", RegexOptions.ECMAScript)) //Que tenga digitos numericos
-                score++;                    //Medium Pass
-            if (Regex.IsMatch(password, @"/[a-z]/", RegexOptions.ECMAScript) &&
-              Regex.IsMatch(password, @"/[A-Z]/", RegexOptions.ECMAScript)) //Que tenga mayusculas y minusculas
-                score++;                    //Strong Pass
-            if (Regex.IsMatch(password, @"/[!,@,#,$,%,^,&,*,?,_,~,-,€,(,)]/", RegexOptions.ECMAScript)) //Que tenga caracteres especiales.
-                score++;                    //VeryStrong Pass
-
+            if (String.IsNullOrEmpty(password) || String.IsNullOrEmpty(password.Trim())) return 0;
+            if (HasMinimumLength(password, 5)) score++;
+            if (HasMinimumLength(password, 8)) score++;
+            if (HasUpperCaseLetter(password) && HasLowerCaseLetter(password)) score++;
+            if (HasDigit(password)) score++;
+            if (HasSpecialChar(password)) score++;
             return score;
         }
 
+        private bool HasMinimumLength(string password, int minLength)
+        {
+            return password.Length >= minLength;
+        }
+
+        private bool HasMinimumUniqueChars(string password, int minUniqueChars)
+        {
+            return password.Distinct().Count() >= minUniqueChars;
+        }
+
+        /// <summary>
+        /// Returns TRUE if the password has at least one digit
+        /// </summary>
+        private bool HasDigit(string password)
+        {
+            return password.Any(c => char.IsDigit(c));
+        }
+
+        /// <summary>
+        /// Returns TRUE if the password has at least one special character
+        /// </summary>
+        private bool HasSpecialChar(string password)
+        {
+            // return password.Any(c => char.IsPunctuation(c)) || password.Any(c => char.IsSeparator(c)) || password.Any(c => char.IsSymbol(c));
+            return password.IndexOfAny("!@#$%^&*?_~-£().,".ToCharArray()) != -1;
+        }
+
+        /// <summary>
+        /// Returns TRUE if the password has at least one uppercase letter
+        /// </summary>
+        private bool HasUpperCaseLetter(string password)
+        {
+            return password.Any(c => char.IsUpper(c));
+        }
+
+        /// <summary>
+        /// Returns TRUE if the password has at least one lowercase letter
+        /// </summary>
+        private bool HasLowerCaseLetter(string password)
+        {
+            return password.Any(c => char.IsLower(c));
+        }
+        
     }
 }
